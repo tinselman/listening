@@ -1,0 +1,924 @@
+[
+ {
+  "id": "amvq1jm4d0",
+  "title": "Myst Soundtrack—Remastered 2022",
+  "artist": "Robyn C Miller",
+  "year": "2022",
+  "tracks": [
+   {
+    "id": "tmvq1pyos1",
+    "title": "Myst Theme",
+    "file": "albums/amvq1jm4d0/tmvq1pyos1.m4a",
+    "dur": 89.8
+   },
+   {
+    "id": "tmvq1q16c2",
+    "title": "Treegate",
+    "file": "albums/amvq1jm4d0/tmvq1q16c2.m4a",
+    "dur": 118.5
+   },
+   {
+    "id": "tmvq1q3on3",
+    "title": "Planetarium",
+    "file": "albums/amvq1jm4d0/tmvq1q3on3.m4a",
+    "dur": 98.5
+   },
+   {
+    "id": "tmvq1q5th4",
+    "title": "Shipgate",
+    "file": "albums/amvq1jm4d0/tmvq1q5th4.m4a",
+    "dur": 87.5
+   },
+   {
+    "id": "tmvq1q80n5",
+    "title": "The Tower",
+    "file": "albums/amvq1jm4d0/tmvq1q80n5.m4a",
+    "dur": 103.5
+   },
+   {
+    "id": "tmvq1qa5c6",
+    "title": "The Last Message",
+    "file": "albums/amvq1jm4d0/tmvq1qa5c6.m4a",
+    "dur": 154.5
+   },
+   {
+    "id": "tmvq1qden7",
+    "title": "Fortress Ambience Part I",
+    "file": "albums/amvq1jm4d0/tmvq1qden7.m4a",
+    "dur": 38.3
+   },
+   {
+    "id": "tmvq1qekx8",
+    "title": "Fortress Ambience Part II",
+    "file": "albums/amvq1jm4d0/tmvq1qekx8.m4a",
+    "dur": 47.6
+   },
+   {
+    "id": "tmvq1qfv59",
+    "title": "Mechanical Mystgate",
+    "file": "albums/amvq1jm4d0/tmvq1qfv59.m4a",
+    "dur": 120.6
+   },
+   {
+    "id": "tmvq1qipfa",
+    "title": "Sirrus' Cache",
+    "file": "albums/amvq1jm4d0/tmvq1qipfa.m4a",
+    "dur": 102.3
+   },
+   {
+    "id": "tmvq1ql0vb",
+    "title": "Sirrus' Theme - Mechanical Age",
+    "file": "albums/amvq1jm4d0/tmvq1ql0vb.m4a",
+    "dur": 94.8
+   },
+   {
+    "id": "tmvq1qn5kc",
+    "title": "Achenar's Cache",
+    "file": "albums/amvq1jm4d0/tmvq1qn5kc.m4a",
+    "dur": 101.1
+   },
+   {
+    "id": "tmvq1qpkmd",
+    "title": "Achenar's Theme -Mechanical Age",
+    "file": "albums/amvq1jm4d0/tmvq1qpkmd.m4a",
+    "dur": 131
+   },
+   {
+    "id": "tmvq1qsf5e",
+    "title": "Compass Rose",
+    "file": "albums/amvq1jm4d0/tmvq1qsf5e.m4a",
+    "dur": 88.5
+   },
+   {
+    "id": "tmvq1quomf",
+    "title": "Above Stoneship (Telescope Theme)",
+    "file": "albums/amvq1jm4d0/tmvq1quomf.m4a",
+    "dur": 90
+   },
+   {
+    "id": "tmvq1qwlyg",
+    "title": "Sirrus Theme Stoneship Age",
+    "file": "albums/amvq1jm4d0/tmvq1qwlyg.m4a",
+    "dur": 85.5
+   },
+   {
+    "id": "tmvq1qylsh",
+    "title": "Achenar's Theme - Stoneship Age",
+    "file": "albums/amvq1jm4d0/tmvq1qylsh.m4a",
+    "dur": 100.5
+   },
+   {
+    "id": "tmvq1r0woi",
+    "title": "Selenitic Mystgate",
+    "file": "albums/amvq1jm4d0/tmvq1r0woi.m4a",
+    "dur": 102
+   },
+   {
+    "id": "tmvq1r32dj",
+    "title": "The Temple of Achenar",
+    "file": "albums/amvq1jm4d0/tmvq1r32dj.m4a",
+    "dur": 95.3
+   },
+   {
+    "id": "tmvq1r4zek",
+    "title": "Sirrus' Theme - Channelwood Age",
+    "file": "albums/amvq1jm4d0/tmvq1r4zek.m4a",
+    "dur": 92.8
+   },
+   {
+    "id": "tmvq1r6vgl",
+    "title": "Achenar's Theme - Channelwood Age",
+    "file": "albums/amvq1jm4d0/tmvq1r6vgl.m4a",
+    "dur": 127.8
+   },
+   {
+    "id": "tmvq1r9mcm",
+    "title": "Un-Finale",
+    "file": "albums/amvq1jm4d0/tmvq1r9mcm.m4a",
+    "dur": 117.3
+   },
+   {
+    "id": "tmvq1rc6ln",
+    "title": "Finale",
+    "file": "albums/amvq1jm4d0/tmvq1rc6ln.m4a",
+    "dur": 94.3
+   },
+   {
+    "id": "tmvq1re4uo",
+    "title": "Fireplace Theme",
+    "file": "albums/amvq1jm4d0/tmvq1re4uo.m4a",
+    "dur": 42.3
+   },
+   {
+    "id": "tmvq1rfctp",
+    "title": "Early Selenitic Mystgate",
+    "file": "albums/amvq1jm4d0/tmvq1rfctp.m4a",
+    "dur": 77.4
+   },
+   {
+    "id": "tmvq1rgzwq",
+    "title": "Original Un-Finale",
+    "file": "albums/amvq1jm4d0/tmvq1rgzwq.m4a",
+    "dur": 88.3
+   }
+  ],
+  "cover": "albums/amvq1jm4d0/cover.jpg",
+  "tint": "#433a34",
+  "v": 2
+ },
+ {
+  "id": "amvq1rnjrr",
+  "title": "Riven Soundtrack—Remastered 2024",
+  "artist": "Robyn Miller",
+  "year": "2024",
+  "tracks": [
+   {
+    "id": "tmvq1w9hjt",
+    "title": "Link",
+    "file": "albums/amvq1rnjrr/tmvq1w9hjt.m4a",
+    "dur": 10.5
+   },
+   {
+    "id": "tmvq1wa1au",
+    "title": "Atrus' Theme",
+    "file": "albums/amvq1rnjrr/tmvq1wa1au.m4a",
+    "dur": 246.9
+   },
+   {
+    "id": "tmvq1warov",
+    "title": "Gateroom",
+    "file": "albums/amvq1rnjrr/tmvq1warov.m4a",
+    "dur": 225.8
+   },
+   {
+    "id": "tmvq1we0tw",
+    "title": "Jungle Totem",
+    "file": "albums/amvq1rnjrr/tmvq1we0tw.m4a",
+    "dur": 161.3
+   },
+   {
+    "id": "tmvq1wh1bx",
+    "title": "Survey Island Theme",
+    "file": "albums/amvq1rnjrr/tmvq1wh1bx.m4a",
+    "dur": 133.1
+   },
+   {
+    "id": "tmvq1wji2y",
+    "title": "Temple",
+    "file": "albums/amvq1rnjrr/tmvq1wji2y.m4a",
+    "dur": 163
+   },
+   {
+    "id": "tmvq1wm7xz",
+    "title": "Village Entrance Theme",
+    "file": "albums/amvq1rnjrr/tmvq1wm7xz.m4a",
+    "dur": 153.4
+   },
+   {
+    "id": "tmvq1wog410",
+    "title": "Moiety Caves",
+    "file": "albums/amvq1rnjrr/tmvq1wog410.m4a",
+    "dur": 173.5
+   },
+   {
+    "id": "tmvq1woyk11",
+    "title": "Moiety Theme",
+    "file": "albums/amvq1rnjrr/tmvq1woyk11.m4a",
+    "dur": 133.4
+   },
+   {
+    "id": "tmvq1wpde12",
+    "title": "Boat Ride",
+    "file": "albums/amvq1rnjrr/tmvq1wpde12.m4a",
+    "dur": 205.3
+   },
+   {
+    "id": "tmvq1wpz513",
+    "title": "Moiety Prison",
+    "file": "albums/amvq1rnjrr/tmvq1wpz513.m4a",
+    "dur": 107.4
+   },
+   {
+    "id": "tmvq1wro014",
+    "title": "Our Final Meeting in the Hive",
+    "file": "albums/amvq1rnjrr/tmvq1wro014.m4a",
+    "dur": 51.5
+   },
+   {
+    "id": "tmvq1wsyx15",
+    "title": "The Red Cave",
+    "file": "albums/amvq1rnjrr/tmvq1wsyx15.m4a",
+    "dur": 113.5
+   },
+   {
+    "id": "tmvq1wusz16",
+    "title": "Wahrk Room",
+    "file": "albums/amvq1rnjrr/tmvq1wusz16.m4a",
+    "dur": 144
+   },
+   {
+    "id": "tmvq1wwum17",
+    "title": "Catherine's Prelude",
+    "file": "albums/amvq1rnjrr/tmvq1wwum17.m4a",
+    "dur": 119.5
+   },
+   {
+    "id": "tmvq1wynx18",
+    "title": "Catherine's Theme",
+    "file": "albums/amvq1rnjrr/tmvq1wynx18.m4a",
+    "dur": 65.6
+   },
+   {
+    "id": "tmvq1wzv119",
+    "title": "Catherine's Freedom",
+    "file": "albums/amvq1rnjrr/tmvq1wzv119.m4a",
+    "dur": 118.1
+   },
+   {
+    "id": "tmvq1x1vw1a",
+    "title": "Gehn Speaks",
+    "file": "albums/amvq1rnjrr/tmvq1x1vw1a.m4a",
+    "dur": 263.8
+   },
+   {
+    "id": "tmvq1x5dz1b",
+    "title": "Gehn's Theme",
+    "file": "albums/amvq1rnjrr/tmvq1x5dz1b.m4a",
+    "dur": 240.5
+   },
+   {
+    "id": "tmvq1x8xa1c",
+    "title": "Gehn Again",
+    "file": "albums/amvq1rnjrr/tmvq1x8xa1c.m4a",
+    "dur": 319.6
+   },
+   {
+    "id": "tmvq1xcua1d",
+    "title": "Fissure",
+    "file": "albums/amvq1rnjrr/tmvq1xcua1d.m4a",
+    "dur": 332
+   },
+   {
+    "id": "tmvq1xiau1e",
+    "title": "Into the Unknown Part I",
+    "file": "albums/amvq1rnjrr/tmvq1xiau1e.m4a",
+    "dur": 118.5
+   },
+   {
+    "id": "tmvq1xkxj1f",
+    "title": "Into the Unknown Part II",
+    "file": "albums/amvq1rnjrr/tmvq1xkxj1f.m4a",
+    "dur": 150.5
+   },
+   {
+    "id": "tmvq1xnvh1g",
+    "title": "Into the Unknown Part III",
+    "file": "albums/amvq1rnjrr/tmvq1xnvh1g.m4a",
+    "dur": 114.5
+   },
+   {
+    "id": "tmvq1xoe91h",
+    "title": "Into the Unknown Part IV",
+    "file": "albums/amvq1rnjrr/tmvq1xoe91h.m4a",
+    "dur": 137.3
+   },
+   {
+    "id": "tmvq1xr3i1i",
+    "title": "Whistle While we Work Part I",
+    "file": "albums/amvq1rnjrr/tmvq1xr3i1i.m4a",
+    "dur": 262.3
+   },
+   {
+    "id": "tmvq1xvxk1j",
+    "title": "Whistle While we Work Part II",
+    "file": "albums/amvq1rnjrr/tmvq1xvxk1j.m4a",
+    "dur": 150
+   },
+   {
+    "id": "tmvq1xz0p1k",
+    "title": "Whistle While we Work Part III",
+    "file": "albums/amvq1rnjrr/tmvq1xz0p1k.m4a",
+    "dur": 106.5
+   },
+   {
+    "id": "tmvq1y1521l",
+    "title": "Bonus Track",
+    "file": "albums/amvq1rnjrr/tmvq1y1521l.m4a",
+    "dur": 137.1
+   },
+   {
+    "id": "tmvq1y3zz1m",
+    "title": "Heavy is the Hand that Writes the Ages",
+    "file": "albums/amvq1rnjrr/tmvq1y3zz1m.m4a",
+    "dur": 108.5
+   }
+  ],
+  "cover": "albums/amvq1rnjrr/cover.jpg",
+  "tint": "#37230f",
+  "v": 1
+ },
+ {
+  "id": "amvq2bakn0",
+  "title": "Lost Tracks, Part I—Myst",
+  "artist": "Robyn C Miller",
+  "year": "2022",
+  "tracks": [
+   {
+    "id": "tmvq2l8ke0",
+    "title": "Shipgate II",
+    "file": "albums/amvq2bakn0/tmvq2l8ke0.m4a",
+    "dur": 108.8
+   },
+   {
+    "id": "tmvq2l9kh1",
+    "title": "If Immortal",
+    "file": "albums/amvq2bakn0/tmvq2l9kh1.m4a",
+    "dur": 97.7
+   },
+   {
+    "id": "tmvq2laf82",
+    "title": "Fortress Ambience Demo",
+    "file": "albums/amvq2bakn0/tmvq2laf82.m4a",
+    "dur": 78.5
+   },
+   {
+    "id": "tmvq2lb6j3",
+    "title": "Down to Another Age",
+    "file": "albums/amvq2bakn0/tmvq2lb6j3.m4a",
+    "dur": 122.1
+   },
+   {
+    "id": "tmvq2lc6n4",
+    "title": "The Smell of Freshly Rendered Pixels",
+    "file": "albums/amvq2bakn0/tmvq2lc6n4.m4a",
+    "dur": 55.1
+   },
+   {
+    "id": "tmvq2lcxh5",
+    "title": "Out of Breath",
+    "file": "albums/amvq2bakn0/tmvq2lcxh5.m4a",
+    "dur": 94.2
+   },
+   {
+    "id": "tmvq2ldpd6",
+    "title": "Shipgate Demo",
+    "file": "albums/amvq2bakn0/tmvq2ldpd6.m4a",
+    "dur": 57.9
+   },
+   {
+    "id": "tmvq2ledu7",
+    "title": "Time Before Time",
+    "file": "albums/amvq2bakn0/tmvq2ledu7.m4a",
+    "dur": 157.7
+   },
+   {
+    "id": "tmvq2lfha8",
+    "title": "Stoneship Demo",
+    "file": "albums/amvq2bakn0/tmvq2lfha8.m4a",
+    "dur": 114.4
+   }
+  ],
+  "cover": "albums/amvq2bakn0/cover.jpg",
+  "tint": "#858ca4",
+  "v": 1
+ },
+ {
+  "id": "amvq3tqkb0",
+  "title": "Lost Tracks, Part II",
+  "artist": "Robyn C Miller",
+  "year": "2022",
+  "tracks": [
+   {
+    "id": "tmvq3ygps1",
+    "title": "Shattered Sun",
+    "file": "albums/amvq3tqkb0/tmvq3ygps1.m4a",
+    "dur": 103.8
+   },
+   {
+    "id": "tmvq3yjq42",
+    "title": "Blood on the Second Floor",
+    "file": "albums/amvq3tqkb0/tmvq3yjq42.m4a",
+    "dur": 232.4
+   },
+   {
+    "id": "tmvq3youl3",
+    "title": "In Remembrance Descending",
+    "file": "albums/amvq3tqkb0/tmvq3youl3.m4a",
+    "dur": 246.8
+   },
+   {
+    "id": "tmvq3yu494",
+    "title": "Milkshake",
+    "file": "albums/amvq3tqkb0/tmvq3yu494.m4a",
+    "dur": 147.4
+   },
+   {
+    "id": "tmvq3yxja5",
+    "title": "Target Practice",
+    "file": "albums/amvq3tqkb0/tmvq3yxja5.m4a",
+    "dur": 189.6
+   },
+   {
+    "id": "tmvq3z1ot6",
+    "title": "Deer in the Headlights",
+    "file": "albums/amvq3tqkb0/tmvq3z1ot6.m4a",
+    "dur": 186
+   },
+   {
+    "id": "tmvq3z5ky7",
+    "title": "Drunken Waltz",
+    "file": "albums/amvq3tqkb0/tmvq3z5ky7.m4a",
+    "dur": 130.3
+   },
+   {
+    "id": "tmvq3z8g68",
+    "title": "Too Late to Play",
+    "file": "albums/amvq3tqkb0/tmvq3z8g68.m4a",
+    "dur": 209.5
+   }
+  ],
+  "cover": "albums/amvq3tqkb0/cover.jpg",
+  "tint": "#77747f",
+  "v": 1
+ },
+ {
+  "id": "amvq4fmsy9",
+  "title": "Lost Tracks, Part III",
+  "artist": "Robyn C Miller",
+  "year": "2022",
+  "tracks": [
+   {
+    "id": "tmvq4h13za",
+    "title": "COVID",
+    "file": "albums/amvq4fmsy9/tmvq4h13za.m4a",
+    "dur": 110
+   },
+   {
+    "id": "tmvq4h43jb",
+    "title": "CraKtoN",
+    "file": "albums/amvq4fmsy9/tmvq4h43jb.m4a",
+    "dur": 74.5
+   },
+   {
+    "id": "tmvq4h5yyc",
+    "title": "Sleeping Greebles",
+    "file": "albums/amvq4fmsy9/tmvq4h5yyc.m4a",
+    "dur": 70.2
+   },
+   {
+    "id": "tmvq4h7ntd",
+    "title": "School of Fortune",
+    "file": "albums/amvq4fmsy9/tmvq4h7ntd.m4a",
+    "dur": 238.6
+   },
+   {
+    "id": "tmvq4hcv7e",
+    "title": "Morning Waves",
+    "file": "albums/amvq4fmsy9/tmvq4hcv7e.m4a",
+    "dur": 179.5
+   },
+   {
+    "id": "tmvq4hg7xf",
+    "title": "Boadcast",
+    "file": "albums/amvq4fmsy9/tmvq4hg7xf.m4a",
+    "dur": 144.6
+   },
+   {
+    "id": "tmvq4hj8pg",
+    "title": "All Never Unknown",
+    "file": "albums/amvq4fmsy9/tmvq4hj8pg.m4a",
+    "dur": 124.5
+   },
+   {
+    "id": "tmvq4hlryh",
+    "title": "Get Rid of the Gun",
+    "file": "albums/amvq4fmsy9/tmvq4hlryh.m4a",
+    "dur": 163.6
+   },
+   {
+    "id": "tmvq4hp04i",
+    "title": "Don't Expect Justice",
+    "file": "albums/amvq4fmsy9/tmvq4hp04i.m4a",
+    "dur": 112.3
+   },
+   {
+    "id": "tmvq4hrajj",
+    "title": "Lemon",
+    "file": "albums/amvq4fmsy9/tmvq4hrajj.m4a",
+    "dur": 125
+   },
+   {
+    "id": "tmvq4htszk",
+    "title": "End of an Age",
+    "file": "albums/amvq4fmsy9/tmvq4htszk.m4a",
+    "dur": 134.8
+   },
+   {
+    "id": "tmvq4hwm8l",
+    "title": "Get Out of My Way",
+    "file": "albums/amvq4fmsy9/tmvq4hwm8l.m4a",
+    "dur": 96.5
+   },
+   {
+    "id": "tmvq4hyo9m",
+    "title": "Frayed",
+    "file": "albums/amvq4fmsy9/tmvq4hyo9m.m4a",
+    "dur": 109
+   },
+   {
+    "id": "tmvq4i0lpn",
+    "title": "Godzilla Lucky",
+    "file": "albums/amvq4fmsy9/tmvq4i0lpn.m4a",
+    "dur": 144.3
+   },
+   {
+    "id": "tmvq4i4abo",
+    "title": "Redtape and Sunlight",
+    "file": "albums/amvq4fmsy9/tmvq4i4abo.m4a",
+    "dur": 176.5
+   },
+   {
+    "id": "tmvq4i82cp",
+    "title": "Super Star Menace",
+    "file": "albums/amvq4fmsy9/tmvq4i82cp.m4a",
+    "dur": 100.8
+   }
+  ],
+  "cover": "albums/amvq4fmsy9/cover.jpg",
+  "tint": "#66635c",
+  "v": 1
+ },
+ {
+  "id": "amvq5363y0",
+  "title": "Obduction Soundtrack",
+  "artist": "Robyn C Miller",
+  "year": "2016",
+  "tracks": [
+   {
+    "id": "tmvq5b1ky1",
+    "title": "Not Worth the Wistful Sentimentality of this Moment",
+    "file": "albums/amvq5363y0/tmvq5b1ky1.m4a",
+    "dur": 185.7
+   },
+   {
+    "id": "tmvq5b26t2",
+    "title": "The Rabbit Hole",
+    "file": "albums/amvq5363y0/tmvq5b26t2.m4a",
+    "dur": 72.4
+   },
+   {
+    "id": "tmvq5b2g03",
+    "title": "Welcome Music",
+    "file": "albums/amvq5363y0/tmvq5b2g03.m4a",
+    "dur": 138.6
+   },
+   {
+    "id": "tmvq5b2wv4",
+    "title": "A Man Who Grossly Overvalues His Own Importance",
+    "file": "albums/amvq5363y0/tmvq5b2wv4.m4a",
+    "dur": 138.3
+   },
+   {
+    "id": "tmvq5b3cx5",
+    "title": "Caroline Farley I",
+    "file": "albums/amvq5363y0/tmvq5b3cx5.m4a",
+    "dur": 146.2
+   },
+   {
+    "id": "tmvq5b3tu6",
+    "title": "Completing Your Task",
+    "file": "albums/amvq5363y0/tmvq5b3tu6.m4a",
+    "dur": 150.3
+   },
+   {
+    "id": "tmvq5b4ay7",
+    "title": "Politics as Usual",
+    "file": "albums/amvq5363y0/tmvq5b4ay7.m4a",
+    "dur": 171.2
+   },
+   {
+    "id": "tmvq5b4v28",
+    "title": "The Space Between Worlds I",
+    "file": "albums/amvq5363y0/tmvq5b4v28.m4a",
+    "dur": 229.3
+   },
+   {
+    "id": "tmvq5b5kj9",
+    "title": "Alone at this Point",
+    "file": "albums/amvq5363y0/tmvq5b5kj9.m4a",
+    "dur": 180.5
+   },
+   {
+    "id": "tmvq5b64fa",
+    "title": "Mutated Clockwork",
+    "file": "albums/amvq5363y0/tmvq5b64fa.m4a",
+    "dur": 235.5
+   },
+   {
+    "id": "tmvq5b6vkb",
+    "title": "Machine Step",
+    "file": "albums/amvq5363y0/tmvq5b6vkb.m4a",
+    "dur": 188
+   },
+   {
+    "id": "tmvq5b7hzc",
+    "title": "Hive",
+    "file": "albums/amvq5363y0/tmvq5b7hzc.m4a",
+    "dur": 153.5
+   },
+   {
+    "id": "tmvq5b801d",
+    "title": "History Lesson",
+    "file": "albums/amvq5363y0/tmvq5b801d.m4a",
+    "dur": 176.3
+   },
+   {
+    "id": "tmvq5b8kle",
+    "title": "Iron Altitude High",
+    "file": "albums/amvq5363y0/tmvq5b8kle.m4a",
+    "dur": 143.9
+   },
+   {
+    "id": "tmvq5b922f",
+    "title": "From the Innocent Earth",
+    "file": "albums/amvq5363y0/tmvq5b922f.m4a",
+    "dur": 139.2
+   },
+   {
+    "id": "tmvq5b9hsg",
+    "title": "Stepping Over Bones",
+    "file": "albums/amvq5363y0/tmvq5b9hsg.m4a",
+    "dur": 137.3
+   },
+   {
+    "id": "tmvq5b9xhh",
+    "title": "W.M.D.",
+    "file": "albums/amvq5363y0/tmvq5b9xhh.m4a",
+    "dur": 107
+   },
+   {
+    "id": "tmvq5baagi",
+    "title": "Always Ignore the Damage You've Done",
+    "file": "albums/amvq5363y0/tmvq5baagi.m4a",
+    "dur": 87.1
+   },
+   {
+    "id": "tmvq5bakvj",
+    "title": "Who Will Stand at Our Graves?",
+    "file": "albums/amvq5363y0/tmvq5bakvj.m4a",
+    "dur": 248.2
+   },
+   {
+    "id": "tmvq5bbddk",
+    "title": "The Space Between Worlds II",
+    "file": "albums/amvq5363y0/tmvq5bbddk.m4a",
+    "dur": 162.1
+   },
+   {
+    "id": "tmvq5bbvvl",
+    "title": "Village Noise",
+    "file": "albums/amvq5363y0/tmvq5bbvvl.m4a",
+    "dur": 102.1
+   },
+   {
+    "id": "tmvq5bc84m",
+    "title": "Caroline Farley II",
+    "file": "albums/amvq5363y0/tmvq5bc84m.m4a",
+    "dur": 149.1
+   },
+   {
+    "id": "tmvq5bcpyn",
+    "title": "Big Fish",
+    "file": "albums/amvq5363y0/tmvq5bcpyn.m4a",
+    "dur": 131.9
+   },
+   {
+    "id": "tmvq5bd5lo",
+    "title": "Adreneline Junky",
+    "file": "albums/amvq5363y0/tmvq5bd5lo.m4a",
+    "dur": 186
+   },
+   {
+    "id": "tmvq5bdqzp",
+    "title": "You Paid for this View",
+    "file": "albums/amvq5363y0/tmvq5bdqzp.m4a",
+    "dur": 286.9
+   },
+   {
+    "id": "tmvq5bem8q",
+    "title": "You Lost, Bitch",
+    "file": "albums/amvq5363y0/tmvq5bem8q.m4a",
+    "dur": 251
+   },
+   {
+    "id": "tmvq5bfeur",
+    "title": "Diaspora",
+    "file": "albums/amvq5363y0/tmvq5bfeur.m4a",
+    "dur": 232.8
+   },
+   {
+    "id": "tmvq5bg54s",
+    "title": "Post Game Tristesse",
+    "file": "albums/amvq5363y0/tmvq5bg54s.m4a",
+    "dur": 197.4
+   }
+  ],
+  "cover": "albums/amvq5363y0/cover.jpg",
+  "tint": "#2b454c",
+  "v": 1
+ },
+ {
+  "id": "amvq5gvegt",
+  "title": "The Immortal Augustus Gladstone—Soundtrack",
+  "artist": "Robyn C Miller",
+  "year": "2014",
+  "tracks": [
+   {
+    "id": "tmvq6diou0",
+    "title": "Postmortem",
+    "file": "albums/amvq5gvegt/tmvq6diou0.m4a",
+    "dur": 148.4
+   },
+   {
+    "id": "tmvq6dj751",
+    "title": "This Is My Home",
+    "file": "albums/amvq5gvegt/tmvq6dj751.m4a",
+    "dur": 78.4
+   },
+   {
+    "id": "tmvq6djhk2",
+    "title": "Exposition They Called It",
+    "file": "albums/amvq5gvegt/tmvq6djhk2.m4a",
+    "dur": 60.5
+   },
+   {
+    "id": "tmvq6djp53",
+    "title": "Augustus Contemplates",
+    "file": "albums/amvq5gvegt/tmvq6djp53.m4a",
+    "dur": 95.8
+   },
+   {
+    "id": "tmvq6dk0d4",
+    "title": "Scattered Memories",
+    "file": "albums/amvq5gvegt/tmvq6dk0d4.m4a",
+    "dur": 32.2
+   },
+   {
+    "id": "tmvq6dk5c5",
+    "title": "Archive of My Memories",
+    "file": "albums/amvq5gvegt/tmvq6dk5c5.m4a",
+    "dur": 55.6
+   },
+   {
+    "id": "tmvq6dkcl6",
+    "title": "How I Mentor Tommy",
+    "file": "albums/amvq5gvegt/tmvq6dkcl6.m4a",
+    "dur": 52.9
+   },
+   {
+    "id": "tmvq6dkjm7",
+    "title": "Close Friends With a Count",
+    "file": "albums/amvq5gvegt/tmvq6dkjm7.m4a",
+    "dur": 123.8
+   },
+   {
+    "id": "tmvq6dkxm8",
+    "title": "A Day at the Movies",
+    "file": "albums/amvq5gvegt/tmvq6dkxm8.m4a",
+    "dur": 62.7
+   },
+   {
+    "id": "tmvq6dl5f9",
+    "title": "Well the Building Is Vacant",
+    "file": "albums/amvq5gvegt/tmvq6dl5f9.m4a",
+    "dur": 95.3
+   },
+   {
+    "id": "tmvq6dlgea",
+    "title": "Am I a Servant of Satan?",
+    "file": "albums/amvq5gvegt/tmvq6dlgea.m4a",
+    "dur": 53.2
+   },
+   {
+    "id": "tmvq6dlnfb",
+    "title": "Obsession",
+    "file": "albums/amvq5gvegt/tmvq6dlnfb.m4a",
+    "dur": 90.4
+   },
+   {
+    "id": "tmvq6dlyac",
+    "title": "A Step Backwards",
+    "file": "albums/amvq5gvegt/tmvq6dlyac.m4a",
+    "dur": 55.2
+   },
+   {
+    "id": "tmvq6dm5pd",
+    "title": "A Little Nervous",
+    "file": "albums/amvq5gvegt/tmvq6dm5pd.m4a",
+    "dur": 57.9
+   },
+   {
+    "id": "tmvq6dmdie",
+    "title": "Electroencephalogram",
+    "file": "albums/amvq5gvegt/tmvq6dmdie.m4a",
+    "dur": 43
+   },
+   {
+    "id": "tmvq6dmjaf",
+    "title": "Flight to Vegas",
+    "file": "albums/amvq5gvegt/tmvq6dmjaf.m4a",
+    "dur": 128.5
+   },
+   {
+    "id": "tmvq6dmymg",
+    "title": "How Dear the Morning Can Be",
+    "file": "albums/amvq5gvegt/tmvq6dmymg.m4a",
+    "dur": 174.7
+   },
+   {
+    "id": "tmvq6dni4h",
+    "title": "This Is How It Ends",
+    "file": "albums/amvq5gvegt/tmvq6dni4h.m4a",
+    "dur": 260.7
+   },
+   {
+    "id": "tmvq6do9si",
+    "title": "This Feeling in My Head (Cut from Film",
+    "file": "albums/amvq5gvegt/tmvq6do9si.m4a",
+    "dur": 64.7
+   },
+   {
+    "id": "tmvq6dohwj",
+    "title": "Flight to Vegas (Original Long Version)",
+    "file": "albums/amvq5gvegt/tmvq6dohwj.m4a",
+    "dur": 140.7
+   },
+   {
+    "id": "tmvq6doxwk",
+    "title": "This Is My Home (Original Version)",
+    "file": "albums/amvq5gvegt/tmvq6doxwk.m4a",
+    "dur": 83
+   },
+   {
+    "id": "tmvq6dp7ql",
+    "title": "This Is How It Doesn't End (Unused Version)",
+    "file": "albums/amvq5gvegt/tmvq6dp7ql.m4a",
+    "dur": 244.5
+   }
+  ],
+  "cover": "albums/amvq5gvegt/cover.jpg",
+  "tint": "#264db6",
+  "v": 1
+ },
+ {
+  "id": "amvq6g4xtm",
+  "title": "Little Potato—Soundtrack",
+  "artist": "Robyn C Miller",
+  "year": "2017",
+  "tracks": [],
+  "cover": "albums/amvq6g4xtm/cover.jpg",
+  "tint": "#866861",
+  "v": 1,
+  "off": true
+ }
+]
