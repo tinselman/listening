@@ -915,10 +915,70 @@
   "title": "Little Potato—Soundtrack",
   "artist": "Robyn C Miller",
   "year": "2017",
-  "tracks": [],
+  "tracks": [
+   {
+    "id": "tmvrbkvrf0",
+    "title": "Vladivostok",
+    "file": "albums/amvq6g4xtm/tmvrbkvrf0.m4a",
+    "dur": 149.3
+   },
+   {
+    "id": "tmvrbkw9d1",
+    "title": "American Movies",
+    "file": "albums/amvq6g4xtm/tmvrbkw9d1.m4a",
+    "dur": 118.8
+   },
+   {
+    "id": "tmvrbkwo72",
+    "title": "Thugs That Run the Country",
+    "file": "albums/amvq6g4xtm/tmvrbkwo72.m4a",
+    "dur": 122.3
+   },
+   {
+    "id": "tmvrbkx2p3",
+    "title": "Even Grandma",
+    "file": "albums/amvq6g4xtm/tmvrbkx2p3.m4a",
+    "dur": 44.6
+   },
+   {
+    "id": "tmvrbkx944",
+    "title": "Kiss the Ground",
+    "file": "albums/amvq6g4xtm/tmvrbkx944.m4a",
+    "dur": 160.2
+   },
+   {
+    "id": "tmvrbkxsi5",
+    "title": "Everyone's a Little Gay",
+    "file": "albums/amvq6g4xtm/tmvrbkxsi5.m4a",
+    "dur": 186.8
+   },
+   {
+    "id": "tmvrbkydc6",
+    "title": "Rollercoaster",
+    "file": "albums/amvq6g4xtm/tmvrbkydc6.m4a",
+    "dur": 37.9
+   },
+   {
+    "id": "tmvrbkyiy7",
+    "title": "Vladivostok Original",
+    "file": "albums/amvq6g4xtm/tmvrbkyiy7.m4a",
+    "dur": 142.3
+   },
+   {
+    "id": "tmvrbkz068",
+    "title": "Nobody Hit Me Before",
+    "file": "albums/amvq6g4xtm/tmvrbkz068.m4a",
+    "dur": 81.9
+   },
+   {
+    "id": "tmvrbkzaf9",
+    "title": "Rollercoaster II",
+    "file": "albums/amvq6g4xtm/tmvrbkzaf9.m4a",
+    "dur": 92.4
+   }
+  ],
   "cover": "albums/amvq6g4xtm/cover.jpg",
   "tint": "#866861",
-  "v": 1,
-  "off": true
+  "v": 1
  }
 ]
