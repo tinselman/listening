@@ -1,0 +1,1343 @@
+{
+ "albums/amvq1jm4d0/tmvq1pyos1.m4a": {
+  "bpm": 83.25,
+  "beat0": 0.354,
+  "pulse": 0.279,
+  "punch": 1.63,
+  "double": false,
+  "size": 1723254,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1q16c2.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.18,
+  "pulse": 0.494,
+  "punch": 1.05,
+  "double": false,
+  "size": 2300161,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1q3on3.m4a": {
+  "bpm": 156.5,
+  "beat0": 0.215,
+  "pulse": 0.07,
+  "punch": 1.45,
+  "double": false,
+  "size": 1953799,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1q5th4.m4a": {
+  "bpm": 99.5,
+  "beat0": 0.459,
+  "pulse": 0.048,
+  "punch": 1.6,
+  "double": false,
+  "size": 1752717,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1q80n5.m4a": {
+  "bpm": 134.0,
+  "beat0": 0.209,
+  "pulse": 0.045,
+  "punch": 1.03,
+  "double": false,
+  "size": 2005788,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1qa5c6.m4a": {
+  "bpm": 92.25,
+  "beat0": 0.522,
+  "pulse": 0.468,
+  "punch": 1.04,
+  "double": false,
+  "size": 3013382,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1qden7.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.447,
+  "pulse": 0.756,
+  "punch": 1.04,
+  "double": false,
+  "size": 784176,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1qekx8.m4a": {
+  "bpm": 79.75,
+  "beat0": 0.151,
+  "pulse": 0.505,
+  "punch": 2.01,
+  "double": false,
+  "size": 964455,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1qfv59.m4a": {
+  "bpm": 79.75,
+  "beat0": 0.743,
+  "pulse": 0.588,
+  "punch": 3.2,
+  "double": false,
+  "size": 2401863,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1qipfa.m4a": {
+  "bpm": 89.25,
+  "beat0": 0.528,
+  "pulse": 0.167,
+  "punch": 0.8,
+  "double": false,
+  "size": 2041383,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1ql0vb.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.47,
+  "pulse": 0.743,
+  "punch": 1.05,
+  "double": false,
+  "size": 1898711,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1qn5kc.m4a": {
+  "bpm": 89.25,
+  "beat0": 0.308,
+  "pulse": 0.174,
+  "punch": 1.0,
+  "double": false,
+  "size": 2024660,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1qpkmd.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.342,
+  "pulse": 0.697,
+  "punch": 1.01,
+  "double": false,
+  "size": 2586018,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1qsf5e.m4a": {
+  "bpm": 198.75,
+  "beat0": 0.18,
+  "pulse": 0.222,
+  "punch": 0.99,
+  "double": false,
+  "size": 1738587,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1quomf.m4a": {
+  "bpm": 61.5,
+  "beat0": 0.197,
+  "pulse": 0.095,
+  "punch": 1.44,
+  "double": false,
+  "size": 1533644,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1qwlyg.m4a": {
+  "bpm": 83.25,
+  "beat0": 0.668,
+  "pulse": 0.298,
+  "punch": 3.06,
+  "double": false,
+  "size": 1682470,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1qylsh.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.342,
+  "pulse": 0.384,
+  "punch": 1.05,
+  "double": false,
+  "size": 1999733,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1r0woi.m4a": {
+  "bpm": 74.75,
+  "beat0": 0.569,
+  "pulse": 0.0,
+  "punch": 1.46,
+  "double": false,
+  "size": 1984972,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1r32dj.m4a": {
+  "bpm": 94.0,
+  "beat0": 0.075,
+  "pulse": 0.003,
+  "punch": 1.21,
+  "double": false,
+  "size": 1902712,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1r4zek.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.441,
+  "pulse": 0.253,
+  "punch": 1.04,
+  "double": false,
+  "size": 1822088,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1r6vgl.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.238,
+  "pulse": 0.516,
+  "punch": 1.11,
+  "double": false,
+  "size": 2569883,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1r9mcm.m4a": {
+  "bpm": 92.25,
+  "beat0": 0.54,
+  "pulse": 0.064,
+  "punch": 1.15,
+  "double": false,
+  "size": 2358066,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1rc6ln.m4a": {
+  "bpm": 184.75,
+  "beat0": 0.006,
+  "pulse": 0.314,
+  "punch": 0.97,
+  "double": false,
+  "size": 1858378,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1re4uo.m4a": {
+  "bpm": 139.5,
+  "beat0": 0.372,
+  "pulse": 0.219,
+  "punch": 1.67,
+  "double": false,
+  "size": 841443,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1rfctp.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.041,
+  "pulse": 0.454,
+  "punch": 1.04,
+  "double": false,
+  "size": 1521423,
+  "v": 2
+ },
+ "albums/amvq1jm4d0/tmvq1rgzwq.m4a": {
+  "bpm": 151.75,
+  "beat0": 0.238,
+  "pulse": 0.075,
+  "punch": 1.18,
+  "double": false,
+  "size": 1749125,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1w9hjt.m4a": {
+  "bpm": 105.5,
+  "beat0": 0.012,
+  "pulse": 0.253,
+  "punch": 1.94,
+  "double": false,
+  "size": 152433,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wa1au.m4a": {
+  "bpm": 139.5,
+  "beat0": 0.046,
+  "pulse": 0.586,
+  "punch": 1.48,
+  "double": false,
+  "size": 4991654,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1warov.m4a": {
+  "bpm": 123.0,
+  "beat0": 0.464,
+  "pulse": 0.102,
+  "punch": 1.06,
+  "double": false,
+  "size": 4544370,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1we0tw.m4a": {
+  "bpm": 139.5,
+  "beat0": 0.163,
+  "pulse": 0.202,
+  "punch": 3.01,
+  "double": false,
+  "size": 3167103,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wh1bx.m4a": {
+  "bpm": 161.25,
+  "beat0": 0.197,
+  "pulse": 0.064,
+  "punch": 1.01,
+  "double": false,
+  "size": 2612936,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wji2y.m4a": {
+  "bpm": 178.25,
+  "beat0": 0.215,
+  "pulse": 0.238,
+  "punch": 1.1,
+  "double": false,
+  "size": 3275478,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wm7xz.m4a": {
+  "bpm": 178.25,
+  "beat0": 0.279,
+  "pulse": 0.241,
+  "punch": 1.35,
+  "double": false,
+  "size": 3075030,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wog410.m4a": {
+  "bpm": 139.5,
+  "beat0": 0.168,
+  "pulse": 0.54,
+  "punch": 1.29,
+  "double": false,
+  "size": 3474861,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1woyk11.m4a": {
+  "bpm": 139.5,
+  "beat0": 0.284,
+  "pulse": 0.577,
+  "punch": 1.14,
+  "double": false,
+  "size": 2624694,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wpde12.m4a": {
+  "bpm": 95.5,
+  "beat0": 0.522,
+  "pulse": 0.122,
+  "punch": 1.11,
+  "double": false,
+  "size": 4096100,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wpz513.m4a": {
+  "bpm": 129.0,
+  "beat0": 0.012,
+  "pulse": 0.057,
+  "punch": 1.13,
+  "double": false,
+  "size": 2119898,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wro014.m4a": {
+  "bpm": 114.75,
+  "beat0": 0.174,
+  "pulse": 0.089,
+  "punch": 1.56,
+  "double": false,
+  "size": 1023932,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wsyx15.m4a": {
+  "bpm": 119.0,
+  "beat0": 0.11,
+  "pulse": 0.065,
+  "punch": 1.05,
+  "double": false,
+  "size": 2277624,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wusz16.m4a": {
+  "bpm": 152.0,
+  "beat0": 0.186,
+  "pulse": 0.103,
+  "punch": 1.08,
+  "double": false,
+  "size": 2818668,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wwum17.m4a": {
+  "bpm": 107.75,
+  "beat0": 0.337,
+  "pulse": 0.083,
+  "punch": 1.5,
+  "double": false,
+  "size": 2398429,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wynx18.m4a": {
+  "bpm": 161.25,
+  "beat0": 0.104,
+  "pulse": 0.084,
+  "punch": 1.48,
+  "double": false,
+  "size": 1251669,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1wzv119.m4a": {
+  "bpm": 106.5,
+  "beat0": 0.54,
+  "pulse": 0.499,
+  "punch": 14.35,
+  "double": false,
+  "size": 2287199,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1x1vw1a.m4a": {
+  "bpm": 79.75,
+  "beat0": 0.743,
+  "pulse": 0.402,
+  "punch": 2.84,
+  "double": false,
+  "size": 5167549,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1x5dz1b.m4a": {
+  "bpm": 159.5,
+  "beat0": 0.342,
+  "pulse": 0.593,
+  "punch": 2.73,
+  "double": true,
+  "size": 4835827,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1x8xa1c.m4a": {
+  "bpm": 79.75,
+  "beat0": 0.296,
+  "pulse": 0.365,
+  "punch": 2.36,
+  "double": false,
+  "size": 6336604,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1xcua1d.m4a": {
+  "bpm": 139.5,
+  "beat0": 0.197,
+  "pulse": 0.465,
+  "punch": 1.12,
+  "double": false,
+  "size": 6679769,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1xiau1e.m4a": {
+  "bpm": 166.5,
+  "beat0": 0.273,
+  "pulse": 0.074,
+  "punch": 1.11,
+  "double": false,
+  "size": 2373062,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1xkxj1f.m4a": {
+  "bpm": 79.75,
+  "beat0": 0.627,
+  "pulse": 0.5,
+  "punch": 3.95,
+  "double": false,
+  "size": 3061332,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1xnvh1g.m4a": {
+  "bpm": 175.5,
+  "beat0": 0.035,
+  "pulse": 0.768,
+  "punch": 1.46,
+  "double": true,
+  "size": 2299195,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1xoe91h.m4a": {
+  "bpm": 93.75,
+  "beat0": 0.61,
+  "pulse": 0.384,
+  "punch": 6.39,
+  "double": false,
+  "size": 2717931,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1xr3i1i.m4a": {
+  "bpm": 139.5,
+  "beat0": 0.139,
+  "pulse": 0.051,
+  "punch": 1.26,
+  "double": false,
+  "size": 5056461,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1xvxk1j.m4a": {
+  "bpm": 107.5,
+  "beat0": 0.528,
+  "pulse": 0.591,
+  "punch": 1.54,
+  "double": false,
+  "size": 2912708,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1xz0p1k.m4a": {
+  "bpm": 152.0,
+  "beat0": 0.041,
+  "pulse": 0.405,
+  "punch": 1.02,
+  "double": false,
+  "size": 2047499,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1y1521l.m4a": {
+  "bpm": 139.5,
+  "beat0": 0.151,
+  "pulse": 0.634,
+  "punch": 1.66,
+  "double": false,
+  "size": 2778961,
+  "v": 2
+ },
+ "albums/amvq1rnjrr/tmvq1y3zz1m.m4a": {
+  "bpm": 156.75,
+  "beat0": 0.023,
+  "pulse": 0.096,
+  "punch": 1.17,
+  "double": false,
+  "size": 2164979,
+  "v": 2
+ },
+ "albums/amvq2bakn0/tmvq2l8ke0.m4a": {
+  "bpm": 112.25,
+  "beat0": 0.07,
+  "pulse": 0.419,
+  "punch": 1.44,
+  "double": false,
+  "size": 2173460,
+  "v": 2
+ },
+ "albums/amvq2bakn0/tmvq2l9kh1.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.476,
+  "pulse": 0.618,
+  "punch": 1.59,
+  "double": false,
+  "size": 1905927,
+  "v": 2
+ },
+ "albums/amvq2bakn0/tmvq2laf82.m4a": {
+  "bpm": 80.0,
+  "beat0": 0.464,
+  "pulse": 0.45,
+  "punch": 44.54,
+  "double": false,
+  "size": 1505721,
+  "v": 2
+ },
+ "albums/amvq2bakn0/tmvq2lb6j3.m4a": {
+  "bpm": 99.5,
+  "beat0": 0.186,
+  "pulse": 0.499,
+  "punch": 0.97,
+  "double": false,
+  "size": 2377533,
+  "v": 2
+ },
+ "albums/amvq2bakn0/tmvq2lc6n4.m4a": {
+  "bpm": 80.75,
+  "beat0": 0.302,
+  "pulse": 0.179,
+  "punch": 1.38,
+  "double": false,
+  "size": 1075458,
+  "v": 2
+ },
+ "albums/amvq2bakn0/tmvq2lcxh5.m4a": {
+  "bpm": 65.25,
+  "beat0": 0.54,
+  "pulse": 0.2,
+  "punch": 2.78,
+  "double": false,
+  "size": 1866126,
+  "v": 2
+ },
+ "albums/amvq2bakn0/tmvq2ldpd6.m4a": {
+  "bpm": 101.25,
+  "beat0": 0.284,
+  "pulse": 0.732,
+  "punch": 1.15,
+  "double": false,
+  "size": 1101638,
+  "v": 2
+ },
+ "albums/amvq2bakn0/tmvq2ledu7.m4a": {
+  "bpm": 172.0,
+  "beat0": 0.313,
+  "pulse": 0.524,
+  "punch": 4.39,
+  "double": true,
+  "size": 2790829,
+  "v": 2
+ },
+ "albums/amvq2bakn0/tmvq2lfha8.m4a": {
+  "bpm": 198.5,
+  "beat0": 0.296,
+  "pulse": 0.725,
+  "punch": 2.0,
+  "double": true,
+  "size": 2276156,
+  "v": 2
+ },
+ "albums/amvq3tqkb0/tmvq3ygps1.m4a": {
+  "bpm": 103.5,
+  "beat0": 0.186,
+  "pulse": 0.503,
+  "punch": 3.91,
+  "double": false,
+  "size": 2008682,
+  "v": 2
+ },
+ "albums/amvq3tqkb0/tmvq3yjq42.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.046,
+  "pulse": 0.514,
+  "punch": 1.63,
+  "double": false,
+  "size": 4652053,
+  "v": 2
+ },
+ "albums/amvq3tqkb0/tmvq3youl3.m4a": {
+  "bpm": 161.25,
+  "beat0": 0.151,
+  "pulse": 0.301,
+  "punch": 1.14,
+  "double": false,
+  "size": 4809585,
+  "v": 2
+ },
+ "albums/amvq3tqkb0/tmvq3yu494.m4a": {
+  "bpm": 147.75,
+  "beat0": 0.075,
+  "pulse": 0.06,
+  "punch": 1.46,
+  "double": false,
+  "size": 2757787,
+  "v": 2
+ },
+ "albums/amvq3tqkb0/tmvq3yxja5.m4a": {
+  "bpm": 103.5,
+  "beat0": 0.174,
+  "pulse": 0.35,
+  "punch": 0.95,
+  "double": false,
+  "size": 3722672,
+  "v": 2
+ },
+ "albums/amvq3tqkb0/tmvq3z1ot6.m4a": {
+  "bpm": 106.5,
+  "beat0": 0.052,
+  "pulse": 0.32,
+  "punch": 1.66,
+  "double": false,
+  "size": 3511513,
+  "v": 2
+ },
+ "albums/amvq3tqkb0/tmvq3z5ky7.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.459,
+  "pulse": 0.61,
+  "punch": 6.62,
+  "double": false,
+  "size": 2496502,
+  "v": 2
+ },
+ "albums/amvq3tqkb0/tmvq3z8g68.m4a": {
+  "bpm": 121.5,
+  "beat0": 0.058,
+  "pulse": 0.288,
+  "punch": 0.95,
+  "double": false,
+  "size": 4120568,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4h13za.m4a": {
+  "bpm": 106.5,
+  "beat0": 0.197,
+  "pulse": 0.428,
+  "punch": 1.04,
+  "double": false,
+  "size": 2072866,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4h43jb.m4a": {
+  "bpm": 101.5,
+  "beat0": 0.139,
+  "pulse": 0.643,
+  "punch": 1.21,
+  "double": false,
+  "size": 1455713,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4h5yyc.m4a": {
+  "bpm": 103.25,
+  "beat0": 0.557,
+  "pulse": 0.529,
+  "punch": 1.02,
+  "double": false,
+  "size": 1354206,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4h7ntd.m4a": {
+  "bpm": 75.75,
+  "beat0": 0.517,
+  "pulse": 0.445,
+  "punch": 1.63,
+  "double": false,
+  "size": 4718856,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4hcv7e.m4a": {
+  "bpm": 112.25,
+  "beat0": 0.139,
+  "pulse": 0.065,
+  "punch": 1.22,
+  "double": false,
+  "size": 3386502,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4hg7xf.m4a": {
+  "bpm": 112.25,
+  "beat0": 0.186,
+  "pulse": 0.424,
+  "punch": 2.63,
+  "double": false,
+  "size": 2826311,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4hj8pg.m4a": {
+  "bpm": 186.0,
+  "beat0": 0.116,
+  "pulse": 0.646,
+  "punch": 1.13,
+  "double": true,
+  "size": 2465282,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4hlryh.m4a": {
+  "bpm": 156.5,
+  "beat0": 0.017,
+  "pulse": 0.433,
+  "punch": 1.65,
+  "double": false,
+  "size": 3306176,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4hp04i.m4a": {
+  "bpm": 166.5,
+  "beat0": 0.052,
+  "pulse": 0.106,
+  "punch": 1.29,
+  "double": false,
+  "size": 2121248,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4hrajj.m4a": {
+  "bpm": 191.0,
+  "beat0": 0.104,
+  "pulse": 0.577,
+  "punch": 1.52,
+  "double": true,
+  "size": 2408396,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4htszk.m4a": {
+  "bpm": 113.5,
+  "beat0": 0.058,
+  "pulse": 0.302,
+  "punch": 1.11,
+  "double": false,
+  "size": 2665441,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4hwm8l.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.459,
+  "pulse": 0.799,
+  "punch": 1.16,
+  "double": false,
+  "size": 1961465,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4hyo9m.m4a": {
+  "bpm": 79.75,
+  "beat0": 0.441,
+  "pulse": 0.076,
+  "punch": 1.14,
+  "double": false,
+  "size": 2093665,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4i0lpn.m4a": {
+  "bpm": 93.75,
+  "beat0": 0.36,
+  "pulse": 0.703,
+  "punch": 7.48,
+  "double": false,
+  "size": 2847909,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4i4abo.m4a": {
+  "bpm": 161.25,
+  "beat0": 0.052,
+  "pulse": 0.715,
+  "punch": 1.21,
+  "double": false,
+  "size": 3539384,
+  "v": 2
+ },
+ "albums/amvq4fmsy9/tmvq4i82cp.m4a": {
+  "bpm": 83.5,
+  "beat0": 0.61,
+  "pulse": 0.321,
+  "punch": 1.08,
+  "double": false,
+  "size": 1962144,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b1ky1.m4a": {
+  "bpm": 107.5,
+  "beat0": 0.319,
+  "pulse": 0.557,
+  "punch": 1.27,
+  "double": false,
+  "size": 3769706,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b26t2.m4a": {
+  "bpm": 110.0,
+  "beat0": 0.493,
+  "pulse": 0.344,
+  "punch": 0.79,
+  "double": false,
+  "size": 1405996,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b2g03.m4a": {
+  "bpm": 112.25,
+  "beat0": 0.041,
+  "pulse": 0.615,
+  "punch": 1.15,
+  "double": false,
+  "size": 2759566,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b2wv4.m4a": {
+  "bpm": 105.5,
+  "beat0": 0.145,
+  "pulse": 0.107,
+  "punch": 1.42,
+  "double": false,
+  "size": 2812545,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b3cx5.m4a": {
+  "bpm": 109.75,
+  "beat0": 0.232,
+  "pulse": 0.037,
+  "punch": 2.17,
+  "double": false,
+  "size": 2894059,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b3tu6.m4a": {
+  "bpm": 103.5,
+  "beat0": 0.325,
+  "pulse": 0.586,
+  "punch": 1.32,
+  "double": false,
+  "size": 3066405,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b4ay7.m4a": {
+  "bpm": 184.5,
+  "beat0": 0.035,
+  "pulse": 0.535,
+  "punch": 1.32,
+  "double": true,
+  "size": 3418754,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b4v28.m4a": {
+  "bpm": 95.5,
+  "beat0": 0.488,
+  "pulse": 0.089,
+  "punch": 1.04,
+  "double": false,
+  "size": 4699012,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b5kj9.m4a": {
+  "bpm": 141.5,
+  "beat0": 0.11,
+  "pulse": 0.319,
+  "punch": 1.85,
+  "double": false,
+  "size": 3682399,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b64fa.m4a": {
+  "bpm": 137.75,
+  "beat0": 0.348,
+  "pulse": 0.297,
+  "punch": 1.24,
+  "double": false,
+  "size": 4831259,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b6vkb.m4a": {
+  "bpm": 92.25,
+  "beat0": 0.337,
+  "pulse": 0.262,
+  "punch": 1.42,
+  "double": false,
+  "size": 3845488,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b7hzc.m4a": {
+  "bpm": 149.75,
+  "beat0": 0.308,
+  "pulse": 0.281,
+  "punch": 1.38,
+  "double": false,
+  "size": 3056953,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b801d.m4a": {
+  "bpm": 141.5,
+  "beat0": 0.081,
+  "pulse": 0.491,
+  "punch": 1.27,
+  "double": false,
+  "size": 3524790,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b8kle.m4a": {
+  "bpm": 101.5,
+  "beat0": 0.43,
+  "pulse": 0.626,
+  "punch": 1.17,
+  "double": false,
+  "size": 2932542,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b922f.m4a": {
+  "bpm": 199.0,
+  "beat0": 0.122,
+  "pulse": 0.534,
+  "punch": 1.2,
+  "double": true,
+  "size": 2833765,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b9hsg.m4a": {
+  "bpm": 101.5,
+  "beat0": 0.099,
+  "pulse": 0.061,
+  "punch": 1.52,
+  "double": false,
+  "size": 2786921,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5b9xhh.m4a": {
+  "bpm": 178.0,
+  "beat0": 0.302,
+  "pulse": 0.277,
+  "punch": 5.44,
+  "double": false,
+  "size": 2140452,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5baagi.m4a": {
+  "bpm": 126.25,
+  "beat0": 0.174,
+  "pulse": 0.376,
+  "punch": 2.56,
+  "double": false,
+  "size": 1732356,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5bakvj.m4a": {
+  "bpm": 89.75,
+  "beat0": 0.325,
+  "pulse": 0.181,
+  "punch": 1.4,
+  "double": false,
+  "size": 4979260,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5bbddk.m4a": {
+  "bpm": 95.5,
+  "beat0": 0.197,
+  "pulse": 0.257,
+  "punch": 1.13,
+  "double": false,
+  "size": 3327866,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5bbvvl.m4a": {
+  "bpm": 99.25,
+  "beat0": 0.151,
+  "pulse": 0.208,
+  "punch": 1.04,
+  "double": false,
+  "size": 1978654,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5bc84m.m4a": {
+  "bpm": 109.75,
+  "beat0": 0.273,
+  "pulse": 0.558,
+  "punch": 1.37,
+  "double": false,
+  "size": 2971287,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5bcpyn.m4a": {
+  "bpm": 105.5,
+  "beat0": 0.226,
+  "pulse": 0.426,
+  "punch": 1.36,
+  "double": false,
+  "size": 2682187,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5bd5lo.m4a": {
+  "bpm": 79.75,
+  "beat0": 0.598,
+  "pulse": 0.477,
+  "punch": 1.34,
+  "double": false,
+  "size": 3689163,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5bdqzp.m4a": {
+  "bpm": 161.25,
+  "beat0": 0.342,
+  "pulse": 0.345,
+  "punch": 1.36,
+  "double": false,
+  "size": 5726124,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5bem8q.m4a": {
+  "bpm": 79.75,
+  "beat0": 0.012,
+  "pulse": 0.345,
+  "punch": 1.87,
+  "double": false,
+  "size": 5015797,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5bfeur.m4a": {
+  "bpm": 80.0,
+  "beat0": 0.215,
+  "pulse": 0.21,
+  "punch": 3.5,
+  "double": false,
+  "size": 4575395,
+  "v": 2
+ },
+ "albums/amvq5363y0/tmvq5bg54s.m4a": {
+  "bpm": 103.25,
+  "beat0": 0.372,
+  "pulse": 0.655,
+  "punch": 0.96,
+  "double": false,
+  "size": 3976450,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6diou0.m4a": {
+  "bpm": 179.5,
+  "beat0": 0.221,
+  "pulse": 0.539,
+  "punch": 1.65,
+  "double": true,
+  "size": 2844332,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dj751.m4a": {
+  "bpm": 199.0,
+  "beat0": 0.11,
+  "pulse": 0.762,
+  "punch": 2.05,
+  "double": true,
+  "size": 1503987,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6djhk2.m4a": {
+  "bpm": 109.75,
+  "beat0": 0.424,
+  "pulse": 0.346,
+  "punch": 4.17,
+  "double": false,
+  "size": 1170946,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6djp53.m4a": {
+  "bpm": 69.75,
+  "beat0": 0.337,
+  "pulse": 0.166,
+  "punch": 3.0,
+  "double": false,
+  "size": 1926162,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dk0d4.m4a": {
+  "bpm": 69.75,
+  "beat0": 0.83,
+  "pulse": 0.088,
+  "punch": 2.68,
+  "double": false,
+  "size": 609990,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dk5c5.m4a": {
+  "bpm": 92.5,
+  "beat0": 0.43,
+  "pulse": 0.217,
+  "punch": 4.42,
+  "double": false,
+  "size": 1050971,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dkcl6.m4a": {
+  "bpm": 90.5,
+  "beat0": 0.65,
+  "pulse": 0.139,
+  "punch": 2.05,
+  "double": false,
+  "size": 1015819,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dkjm7.m4a": {
+  "bpm": 126.0,
+  "beat0": 0.435,
+  "pulse": 0.304,
+  "punch": 6.59,
+  "double": false,
+  "size": 2408863,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dkxm8.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.464,
+  "pulse": 0.199,
+  "punch": 6.11,
+  "double": false,
+  "size": 1202854,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dl5f9.m4a": {
+  "bpm": 191.0,
+  "beat0": 0.046,
+  "pulse": 0.653,
+  "punch": 2.61,
+  "double": true,
+  "size": 1865703,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dlgea.m4a": {
+  "bpm": 110.0,
+  "beat0": 0.232,
+  "pulse": 0.747,
+  "punch": 1.06,
+  "double": false,
+  "size": 1013920,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dlnfb.m4a": {
+  "bpm": 94.0,
+  "beat0": 0.534,
+  "pulse": 0.508,
+  "punch": 1.43,
+  "double": false,
+  "size": 1767958,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dlyac.m4a": {
+  "bpm": 137.75,
+  "beat0": 0.372,
+  "pulse": 0.334,
+  "punch": 1.72,
+  "double": false,
+  "size": 1104605,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dm5pd.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.104,
+  "pulse": 0.206,
+  "punch": 2.41,
+  "double": false,
+  "size": 1098832,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dmdie.m4a": {
+  "bpm": 120.0,
+  "beat0": 0.331,
+  "pulse": 0.507,
+  "punch": 1.34,
+  "double": false,
+  "size": 824629,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dmjaf.m4a": {
+  "bpm": 87.75,
+  "beat0": 0.447,
+  "pulse": 0.379,
+  "punch": 1.57,
+  "double": false,
+  "size": 2536100,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dmymg.m4a": {
+  "bpm": 87.75,
+  "beat0": 0.401,
+  "pulse": 0.446,
+  "punch": 1.02,
+  "double": false,
+  "size": 3330812,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dni4h.m4a": {
+  "bpm": 149.75,
+  "beat0": 0.29,
+  "pulse": 0.493,
+  "punch": 1.21,
+  "double": false,
+  "size": 4868206,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6do9si.m4a": {
+  "bpm": 94.75,
+  "beat0": 0.012,
+  "pulse": 0.389,
+  "punch": 8.12,
+  "double": false,
+  "size": 1220215,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dohwj.m4a": {
+  "bpm": 87.75,
+  "beat0": 0.075,
+  "pulse": 0.37,
+  "punch": 1.34,
+  "double": false,
+  "size": 2765832,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6doxwk.m4a": {
+  "bpm": 199.0,
+  "beat0": 0.099,
+  "pulse": 0.638,
+  "punch": 4.15,
+  "double": true,
+  "size": 1591468,
+  "v": 2
+ },
+ "albums/amvq5gvegt/tmvq6dp7ql.m4a": {
+  "bpm": 149.75,
+  "beat0": 0.401,
+  "pulse": 0.631,
+  "punch": 1.26,
+  "double": false,
+  "size": 4796455,
+  "v": 2
+ },
+ "albums/amvq6g4xtm/tmvrbkvrf0.m4a": {
+  "bpm": 184.5,
+  "beat0": 0.093,
+  "pulse": 0.727,
+  "punch": 4.74,
+  "double": true,
+  "size": 2884804,
+  "v": 2
+ },
+ "albums/amvq6g4xtm/tmvrbkw9d1.m4a": {
+  "bpm": 181.5,
+  "beat0": 0.099,
+  "pulse": 0.825,
+  "punch": 1.51,
+  "double": true,
+  "size": 2428028,
+  "v": 2
+ },
+ "albums/amvq6g4xtm/tmvrbkwo72.m4a": {
+  "bpm": 195.0,
+  "beat0": 0.186,
+  "pulse": 0.592,
+  "punch": 1.11,
+  "double": true,
+  "size": 2342219,
+  "v": 2
+ },
+ "albums/amvq6g4xtm/tmvrbkx2p3.m4a": {
+  "bpm": 139.5,
+  "beat0": 0.064,
+  "pulse": 0.64,
+  "punch": 1.4,
+  "double": false,
+  "size": 856400,
+  "v": 2
+ },
+ "albums/amvq6g4xtm/tmvrbkx944.m4a": {
+  "bpm": 184.5,
+  "beat0": 0.18,
+  "pulse": 0.716,
+  "punch": 1.08,
+  "double": true,
+  "size": 3210803,
+  "v": 2
+ },
+ "albums/amvq6g4xtm/tmvrbkxsi5.m4a": {
+  "bpm": 112.5,
+  "beat0": 0.244,
+  "pulse": 0.339,
+  "punch": 1.24,
+  "double": false,
+  "size": 3704971,
+  "v": 2
+ },
+ "albums/amvq6g4xtm/tmvrbkydc6.m4a": {
+  "bpm": 112.25,
+  "beat0": 0.104,
+  "pulse": 0.081,
+  "punch": 1.11,
+  "double": false,
+  "size": 765623,
+  "v": 2
+ },
+ "albums/amvq6g4xtm/tmvrbkyiy7.m4a": {
+  "bpm": 159.5,
+  "beat0": 0.046,
+  "pulse": 0.624,
+  "punch": 1.5,
+  "double": true,
+  "size": 2693146,
+  "v": 2
+ },
+ "albums/amvq6g4xtm/tmvrbkz068.m4a": {
+  "bpm": 115.0,
+  "beat0": 0.43,
+  "pulse": 0.711,
+  "punch": 1.08,
+  "double": false,
+  "size": 1607428,
+  "v": 2
+ },
+ "albums/amvq6g4xtm/tmvrbkzaf9.m4a": {
+  "bpm": 147.75,
+  "beat0": 0.215,
+  "pulse": 0.336,
+  "punch": 1.27,
+  "double": false,
+  "size": 1850473,
+  "v": 2
+ }
+}
