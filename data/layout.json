@@ -4,7 +4,7 @@
  "doorHeight": 2.6,
  "outline": {
   "x0": 0,
-  "x1": 13.4,
+  "x1": 13.3,
   "z0": -9.1,
   "z1": 1.4,
   "t": 0.4
@@ -21,14 +21,6 @@
    "x1": 8.2,
    "z1": 1.4,
    "t": 0.4
-  },
-  {
-   "id": "museumFront",
-   "x0": 8.4,
-   "z0": -3.8,
-   "x1": 13.4,
-   "z1": -3.8,
-   "t": 0.3
   }
  ],
  "doors": [],
@@ -44,6 +36,30 @@
    "text": {
     "title": "The Listening Room",
     "sub": "Robyn C Miller"
+   }
+  },
+  {
+   "id": "myst",
+   "wall": "E",
+   "side": -1,
+   "u": -0.55,
+   "y": 2.02,
+   "text": {
+    "title": "Myst—1993",
+    "sub": "",
+    "look": "exit"
+   }
+  },
+  {
+   "id": "riven",
+   "wall": "E",
+   "side": -1,
+   "u": -4.6,
+   "y": 2.02,
+   "text": {
+    "title": "Riven—1997",
+    "sub": "",
+    "look": "exit"
    }
   }
  ],
@@ -87,7 +103,13 @@
   {
    "id": "studio",
    "x": 12.8,
-   "z": -0.55,
+   "z": -1.65,
+   "rot": -90
+  },
+  {
+   "id": "riven",
+   "x": 12.65,
+   "z": -4.85,
    "rot": -90
   }
  ]
