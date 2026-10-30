@@ -5,7 +5,7 @@
  "outline": {
   "x0": 0,
   "x1": 13.3,
-  "z0": -9.1,
+  "z0": -9.3,
   "z1": 1.4,
   "t": 0.4
  },
@@ -17,15 +17,34 @@
   {
    "id": "museumWall",
    "x0": 8.2,
-   "z0": -9.1,
+   "z0": -9.3,
    "x1": 8.2,
    "z1": 1.4,
    "t": 0.4
   }
  ],
- "doors": [],
+ "doors": [
+  {
+   "id": "secret",
+   "wall": "museumWall",
+   "a": -2.55,
+   "b": -1.45,
+   "secret": true
+  },
+  {
+   "id": "forest",
+   "wall": "N",
+   "a": 8.4,
+   "b": 13.4,
+   "secret": true,
+   "h": 3.2
+  }
+ ],
  "defaultPaint": "#f2f1ee",
- "paint": {},
+ "paint": {
+  "museumWall:1": "#283248",
+  "E:-1": "#283248"
+ },
  "hang": [
   {
    "id": "title",
@@ -48,19 +67,21 @@
     "title": "Myst—1993",
     "sub": "",
     "look": "exit"
-   }
+   },
+   "follows": "studio"
   },
   {
    "id": "riven",
    "wall": "E",
    "side": -1,
-   "u": -4.6,
+   "u": -5.82,
    "y": 2.02,
    "text": {
     "title": "Riven—1997",
     "sub": "",
     "look": "exit"
-   }
+   },
+   "follows": "riven"
   }
  ],
  "pieces": [
@@ -109,8 +130,29 @@
   {
    "id": "riven",
    "x": 12.65,
-   "z": -4.55,
+   "z": -5.77,
    "rot": -90
+  },
+  {
+   "id": "lounge",
+   "x": 10.55,
+   "z": -6.85,
+   "rot": 180
+  }
+ ],
+ "paintAt": [
+  {
+   "wall": "S",
+   "side": -1,
+   "u": 10.9,
+   "color": "#283248"
+  }
+ ],
+ "ceilingAt": [
+  {
+   "x": 10.9,
+   "z": -4,
+   "color": "#1c2335"
   }
  ]
 }
