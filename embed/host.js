@@ -21,7 +21,7 @@
    Squarespace sends it.
    A tip made (Robyn, 2026-11-03: "If user donates … the creature jumps into view and says …"): her site's Order
    Confirmation Page code (embed/squarespace-order-confirmation.html) notes it in this browser; here — in this tab, or
-   coming back to it — the room is told, once. */
+   coming back to it — the window says her thank-you (2026-11-04), and once it's closed the room is told, once. */
 (function () {
   var PAGE = 'https://tinselman.github.io', STYLE = PAGE + '/instruments/embed/forms.css';
   // (loaded from the Mac itself — the practice copy of her site, tools/try-site.mjs — the room is there too)
@@ -53,15 +53,35 @@
     '.rmi-window.grow.open { transform: translateY(-50%); }',
     '.rmi-window iframe { display: block; width: 100%; height: 300px; border: 0; background: transparent; color-scheme: light; }',
     // (the tip jar, gone on to pay: wider, for the checkout)
-    '.rmi-window.wide { max-width: 760px; }',
-    // (the browser kept the checkout from opening a tab by itself: a button to it, in the window)
-    '.rmi-go { display: none; margin: auto; text-align: center; font: 300 15px/2 "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #111; }',
-    '.rmi-window.go .rmi-go { display: block; } .rmi-window.go iframe { display: none !important; }',
-    '.rmi-go a { display: inline-block; margin: 22px 0 0; border: 1px solid #111; color: #111; text-decoration: none; padding: 13px 34px 12px;',
-    '  font-size: 12px; font-weight: 400; line-height: 1.4; letter-spacing: .24em; text-transform: uppercase; transition: background .15s, color .15s; }',
-    '.rmi-go a:hover { background: #111; color: #f0f0ee; }',
+    // (900 wide or more, Squarespace's checkout sets its summary beside the form: no scrolling, no second Total)
+    '.rmi-window.wide { max-width: 900px; }',
+    /* more below (Robyn, 2026-11-03: "it needs a vertical scroll wheel and arrows on both ends or something to show that
+       there is more data below, like the bottom of the page fades and when you begin scrolling the top of the page
+       fades"): over the page in the window, its bottom fading while there's more below, its top once it's scrolled;
+       and beside it a scroll bar, an arrow at each end */
+    '.rmi-fade { position: absolute; z-index: 2; height: 56px; pointer-events: none; opacity: 0; transition: opacity .25s; }',
+    '.rmi-fade.top { background: linear-gradient(to bottom, rgba(255,255,255,.97), rgba(255,255,255,0)); }',
+    '.rmi-fade.bottom { background: linear-gradient(to top, rgba(255,255,255,.97), rgba(255,255,255,0)); }',
+    '.rmi-fade.on { opacity: 1; }',
+    '.rmi-bar { position: absolute; z-index: 3; width: 18px; display: none; flex-direction: column; align-items: center; }',
+    '.rmi-window.scrolls .rmi-bar { display: flex; }',
+    '.rmi-bar button { flex: none; width: 18px; height: 18px; padding: 0; border: 0; background: transparent; color: #111; cursor: pointer; opacity: .6;',
+    '  font: 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif; }',
+    '.rmi-bar button:hover { opacity: 1; } .rmi-bar button[disabled] { opacity: .18; cursor: default; }',
+    '.rmi-track { position: relative; flex: 1; width: 4px; margin: 4px 0; border-radius: 2px; background: rgba(0,0,0,.12); cursor: pointer; }',
+    '.rmi-thumb { position: absolute; left: -2px; width: 8px; border-radius: 4px; background: rgba(0,0,0,.55); cursor: grab; }',
+    '.rmi-thumb:active { cursor: grabbing; }',
+    // (paying: a little × at the top right)
+    '.rmi-x { display: none; position: absolute; top: 10px; right: 14px; width: 34px; height: 34px; border: 0; background: transparent; color: #111;',
+    '  font: 300 28px/34px "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif; cursor: pointer; opacity: .55; }',
+    '.rmi-x:hover { opacity: 1; } .rmi-window.wide .rmi-x, .rmi-window.thanked .rmi-x { display: block; }',
+    // (paid: her thank-you in the window, in the Contact form's lettering — Robyn, 2026-11-04)
+    '.rmi-thanks { display: none; margin: 0; font: 300 17px/1.85 "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #111;',
+    '  text-align: center; text-wrap: balance; -webkit-font-smoothing: antialiased; }',
+    '.rmi-window.thanked .rmi-thanks { display: block; }',
+    '.rmi-window.thanked iframe { display: none !important; }',
     '@media (min-width: 1100px) and (min-height: 600px) {',
-    '  .rmi-window.wide { width: min(860px, calc(100vw - 48px)); min-height: 0; padding: 40px; }',
+    '  .rmi-window.wide { width: min(980px, calc(100vw - 48px)); min-height: 0; padding: 40px; }',
     '  .rmi-window { --side: min(max(33.333vw, 460px), calc(100vh - 48px));',
     '    left: 50%; top: 50%; width: var(--side); max-width: none; min-height: var(--side); padding: 1in; transform: translate(-50%, -48%); }',
     '  .rmi-window.open { transform: translate(-50%, -50%); }',
@@ -73,13 +93,15 @@
 
   var big = window.matchMedia('(min-width: 1100px) and (min-height: 600px)');
   var veil, box, frame, form = null, wanted = null, hiding = 0;
+  // (more below: the fades and the scroll bar over the window's page)
+  var sb = { top: null, bottom: null, bar: null, drag: null, tick: null, running: false };
   // the tip jar's own frame in the same window (only one of the two shows at a time)
-  var tip = { frame: null, block: null, wanted: false, at: null, dressed: false };
+  var tip = { frame: null, block: null, wanted: false, at: null, dressed: false, paying: false, watch: 0, x: null, thanks: null, owed: false };
   var showing = 'contact';
 
   function build() {
     veil = document.createElement('div'); veil.className = 'rmi-veil'; document.body.appendChild(veil);
-    veil.addEventListener('click', close);                       // a click off the window closes it
+    veil.addEventListener('click', function () { if (!tip.paying) close(); });   // a click off the window closes it (not while paying)
     box = document.createElement('div'); box.className = 'rmi-window';
     box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Contact');
     frame = document.createElement('iframe'); frame.title = 'Contact';
@@ -88,10 +110,22 @@
     tip.frame = document.createElement('iframe'); tip.frame.title = 'Tip jar'; tip.frame.style.display = 'none';
     box.appendChild(tip.frame);
     tip.frame.addEventListener('load', dressTip);
-    tip.go = document.createElement('div'); tip.go.className = 'rmi-go';
-    tip.go.innerHTML = '<div>Your checkout is ready.</div><a target="_blank" rel="noopener">Go to checkout</a>';
-    tip.go.querySelector('a').addEventListener('click', function () { setTimeout(close, 0); });
-    box.appendChild(tip.go);
+    // (card, Apple Pay: let in the window)
+    tip.frame.setAttribute('allow', 'payment');
+    // paying, a way out that can't be clicked by mistake (not a click off the window: that would lose what's typed)
+    tip.x = document.createElement('button'); tip.x.className = 'rmi-x'; tip.x.type = 'button'; tip.x.setAttribute('aria-label', 'Close'); tip.x.textContent = '×';
+    tip.x.addEventListener('click', close);
+    box.appendChild(tip.x);
+    // paid: her thank-you, before they're back in the room (thank)
+    tip.thanks = document.createElement('p'); tip.thanks.className = 'rmi-thanks'; tip.thanks.textContent = THANKS;
+    box.appendChild(tip.thanks);
+    // more below: the fades and the bar (scrollBits)
+    sb.top = document.createElement('div'); sb.top.className = 'rmi-fade top';
+    sb.bottom = document.createElement('div'); sb.bottom.className = 'rmi-fade bottom';
+    sb.bar = document.createElement('div'); sb.bar.className = 'rmi-bar';
+    sb.bar.innerHTML = '<button type="button" class="up" aria-label="Scroll up">▲</button><div class="rmi-track"><div class="rmi-thumb"></div></div><button type="button" class="down" aria-label="Scroll down">▼</button>';
+    box.append(sb.top, sb.bottom, sb.bar);
+    scrollBits();
     catchCheckout();
     window.addEventListener('resize', fit);
     // tell the gallery this page can show the form; and give it the keyboard, so W walks before any click
@@ -148,9 +182,30 @@
     try { d = tip.frame.contentDocument; } catch (e) { d = null; }
     var path = null;
     try { path = tip.frame.contentWindow.location.pathname; } catch (e) { path = null; }
-    // (gone on from the Tip Jar page — to pay, say — or somewhere it can't be read: the window widened to hold it)
+    // (gone on from the Tip Jar page — to pay, say — or somewhere it can't be read: the window widened to hold it;
+    // the checkout dressed as the Contact form is)
     if (path !== '/tip-jar' || !d) {
       if (tip.dressed) { box.classList.add('wide'); fit(); }
+      if (d && d.head && !d.getElementById('rmi-checkout')) {
+        var cf = d.createElement('link'); cf.rel = 'stylesheet'; cf.href = FONT; d.head.appendChild(cf);
+        d.head.appendChild(Object.assign(d.createElement('style'), { id: 'rmi-checkout', textContent: CHECKOUT_STYLE }));
+        // (Robyn, 2026-11-03: less of it — the Subtotal and Tax lines left out, the Total kept; again each time the
+        // checkout draws itself afresh)
+        var trim = function () {
+          var all = d.querySelectorAll('div, li, tr, p, dl');
+          for (var i = 0; i < all.length; i++) {
+            var el = all[i], t = (el.innerText || '').replace(/\s+/g, ' ').trim();
+            if (t.length > 40 || !/^(Subtotal|Tax) \$?[\d.,]+$/i.test(t)) continue;
+            // (the line itself — the biggest box holding just that line)
+            while (el.parentElement && (el.parentElement.innerText || '').replace(/\s+/g, ' ').trim() === t) el = el.parentElement;
+            el.style.setProperty('display', 'none', 'important');
+          }
+        };
+        trim();
+        // (at most once a frame, however busily it redraws as they type)
+        var queued = false, later = function () { if (queued) return; queued = true; d.defaultView.requestAnimationFrame(function () { queued = false; trim(); }); };
+        try { new d.defaultView.MutationObserver(later).observe(d.body, { childList: true, subtree: true }); } catch (e) {}
+      }
       if (d) d.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
       return;
     }
@@ -191,6 +246,34 @@
       d.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
     })();
   }
+  /* Squarespace's checkout in the window, dressed as the Contact form (Robyn, 2026-11-03: "can it be the same text style
+     as the contact pop up and can it be against a transparent background like the contact popup?"): no page behind it
+     (the frosted window shows through), Inter Tight light, labels in small spaced capitals, fields a hairline
+     underneath (red while typing), buttons a hairline box filled when pointed at. (The card number's boxes are the
+     payment company's own frames: their insides stay as they are) */
+  var CHECKOUT_STYLE = [
+    ':root { color-scheme: light; }',
+    'html, body { background: transparent !important; }',
+    'body *:not(iframe):not(svg):not(svg *):not(img) { background-color: transparent !important; background-image: none !important; box-shadow: none !important; }',
+    'body, body * { font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif !important; -webkit-font-smoothing: antialiased; }',
+    'body { color: #111 !important; font-weight: 300 !important; }',
+    'body * { color: #111; border-color: rgba(0,0,0,.18) !important; }',
+    'h1, h2, h3, h4, legend { font-weight: 300 !important; letter-spacing: -0.01em !important; color: #111 !important; }',
+    'label, [class*="label" i], [class*="Label"] { font-size: 11px !important; font-weight: 400 !important; letter-spacing: .22em !important; text-transform: uppercase !important; color: #6b6b6b !important; }',
+    'input:not([type=checkbox]):not([type=radio]), select, textarea { -webkit-appearance: none; appearance: none; background: transparent !important; border: 0 !important;',
+    '  border-bottom: 1px solid #111 !important; border-radius: 0 !important; box-shadow: none !important; outline: none !important; font-size: 16px !important; font-weight: 300 !important; color: #111 !important;',
+    '  padding-left: 0 !important; padding-right: 0 !important; }',
+    'input:focus, select:focus, textarea:focus { border-bottom-color: #f82c1c !important; }',
+    'input::placeholder { color: #9b9a96 !important; opacity: 1 !important; }',
+    'input[type=checkbox], input[type=radio] { accent-color: #111; }',
+    'button, [role=button], a[class*="button" i] { background: transparent !important; color: #111 !important; border: 1px solid #111 !important; border-radius: 0 !important;',
+    '  box-shadow: none !important; font-size: 12px !important; font-weight: 400 !important; letter-spacing: .24em !important; text-transform: uppercase !important; transition: background .15s, color .15s; }',
+    'button:hover, [role=button]:hover, a[class*="button" i]:hover { background: #111 !important; color: #f0f0ee !important; }',
+    'button:hover *, [role=button]:hover *, a[class*="button" i]:hover * { color: #f0f0ee !important; }',
+    'button *, [role=button] * { color: inherit !important; }',
+    // (its sections' boxes: a hairline at most, as the window is the frame)
+    'section, fieldset, [class*="card" i], [class*="panel" i], [class*="section" i] { border-radius: 0 !important; }'
+  ].join('\n');
   // the Donation block's own parts, dressed like the Contact form's: the amounts as small capitals, the button a hairline box
   var TIP_STYLE = [
     '.rmi-tip { text-align: center !important; }',
@@ -214,21 +297,133 @@
     '.rmi-tip .button:hover, .rmi-tip .sqs-donate-button:hover, .rmi-tip .sqs-block-button-element:hover, .rmi-tip button:hover, .rmi-tip a.btn:hover {',
     '  background: #111 !important; color: #f0f0ee !important; }'
   ].join('\n');
-  // Donate's checkout in a tab of its own (the room playing on in this one); the browser's own new-tab rule may want
-  // a click of the visitor's own for it — then a button to it in the window
+  /* Donate (Robyn, 2026-11-03: "after donating, the user must stay in the room. it's okay if a pop-up window comes up
+     with the buyer info but then the user should be able to continue listening to the song" — in this window, "do not
+     leave the room"): Squarespace's block sends the whole page on to its checkout (top.location) — caught here (the
+     Navigation API) and opened in the window instead, wide; and while paying, wherever the checkout sends the whole
+     page (itself again, its thank-you) kept in the window too. Paid: watchPaid. */
   function catchCheckout() {
     var nav = window.navigation;
     if (!nav || !nav.addEventListener) return;
     nav.addEventListener('navigate', function (e) {
       if (showing !== 'tip' || !box.classList.contains('open') || !e.cancelable || e.hashChange || e.downloadRequest) return;
       var u; try { u = new URL(e.destination.url); } catch (x) { return; }
-      if (u.origin !== location.origin || !/^\/checkout(\/|$)/.test(u.pathname)) return;
+      if (u.origin !== location.origin) return;
+      if (!tip.paying && !/^\/checkout(\/|$)/.test(u.pathname)) return;
       e.preventDefault();
-      var w = null; try { w = window.open(u.href, '_blank'); } catch (x) { w = null; }
-      if (w) { try { w.opener = null; } catch (x) {} close(); return; }
-      tip.go.querySelector('a').href = u.href;
-      box.classList.add('go');
+      // (the checkout trying to be the whole page from in here: it stays where it is)
+      var at = null; try { at = tip.frame.contentWindow.location.href; } catch (x) { at = null; }
+      if (at !== u.href) tip.frame.src = u.href;
+      if (!tip.paying) { tip.paying = true; box.classList.add('wide'); fit(); watchPaid(); }
     });
+  }
+  /* paid (Robyn: "The message should come from the creature" — not Squarespace's thank-you page): the window shuts as
+     soon as the payment's through, and the room is told — the creature thanks them. Known by the line her Order
+     Confirmation Page code leaves (embed/), or by the checkout arriving at its confirmation (its address, or its words) */
+  var PAID_AT = /order-confirm|confirmation|\/orders?\/|[?&]orderid=|thank-?you/i;
+  var PAID_SAYS = /thank you for your (donation|order|gift|support|purchase)|order confirmed|donation (confirmed|received)|order (number|#)/i;
+  function watchPaid() {
+    clearInterval(tip.watch);
+    var since = Date.now();
+    tip.watch = setInterval(function () {
+      if (!tip.paying) { clearInterval(tip.watch); return; }
+      var href = '', text = '', flag = 0;
+      try { href = tip.frame.contentWindow.location.href; text = tip.frame.contentDocument.body.innerText || ''; } catch (x) { href = ''; }
+      try { flag = +localStorage.getItem(TIPPED) || 0; } catch (x) { flag = 0; }
+      var path = href.replace(/^https?:\/\/[^/]+/, '');
+      var paid = flag >= since - 1000 || (PAID_AT.test(path) && !/^\/checkout\?cartToken=/i.test(path)) || PAID_SAYS.test(text);
+      if (!paid) return;
+      try { localStorage.removeItem(TIPPED); } catch (x) {}
+      thank();
+    }, 400);
+  }
+  /* paid (Robyn, 2026-11-04: "before user leaves donation dialog, after they have donated, in pop up dialog box type,
+     "THANK YOU for contributing …"): the window says so — its words in place of the checkout, at the Contact window's
+     size — and the room is told to get ready; closed (the ×, a click off it, Esc), the room's told, and the creature
+     takes it from there. (Told of a tip some other way — the checkout in a tab of its own — the window opens to say it) */
+  var THANKS = "THANK YOU for contributing to Robyn's ongoing musical work and his work in the sound listening room. He has something for you too! Take a look!";
+  function thank() {
+    if (!box) return;
+    tip.paying = false; clearInterval(tip.watch);
+    var p = document.querySelector('.rmi-frame');
+    if (!tip.owed && p && p.contentWindow) p.contentWindow.postMessage({ rmiTipSoon: true }, PAGE);
+    tip.owed = true;
+    // (Squarespace's own thank-you, behind: let go of, so nothing there can take the page anywhere)
+    tip.dressed = false; tip.block = null;
+    try { tip.frame.src = 'about:blank'; } catch (e) {}
+    showing = 'thanks';
+    box.classList.remove('wide'); box.classList.add('thanked');
+    box.setAttribute('aria-label', 'Thank you');
+    if (!box.classList.contains('open')) { from = null; frame.style.display = 'none'; tip.frame.style.display = 'none'; show(null); }
+    else fit();
+  }
+  /** the page showing in the window, and what of it scrolls (its own page, or the biggest box in it that scrolls) */
+  function scroller() {
+    if (showing === 'thanks') return null;
+    var f = showing === 'tip' ? tip.frame : frame, d = null;
+    try { d = f && f.contentDocument; } catch (e) { d = null; }
+    if (!d || !d.body) return null;
+    var se = d.scrollingElement || d.documentElement;
+    if (se.scrollHeight > se.clientHeight + 2) return { f: f, el: se };
+    if (!f.rmiInner || !f.rmiInner.isConnected || Date.now() - (f.rmiInnerAt || 0) > 2000) {
+      f.rmiInnerAt = Date.now(); f.rmiInner = null;
+      var all = d.querySelectorAll('div, main, section, form'), best = 0;
+      for (var i = 0; i < all.length; i++) {
+        var el = all[i];
+        if (el.scrollHeight <= el.clientHeight + 2 || el.clientHeight < 120) continue;
+        var oy = d.defaultView.getComputedStyle(el).overflowY;
+        if ((oy === 'auto' || oy === 'scroll') && el.clientHeight > best) { best = el.clientHeight; f.rmiInner = el; }
+      }
+    }
+    return f.rmiInner ? { f: f, el: f.rmiInner } : { f: f, el: null };
+  }
+  function scrollBits() {
+    var up = sb.bar.querySelector('.up'), down = sb.bar.querySelector('.down'), track = sb.bar.querySelector('.rmi-track'), thumb = sb.bar.querySelector('.rmi-thumb');
+    var by = function (k) { var s = scroller(); if (s && s.el) s.el.scrollBy({ top: k * s.el.clientHeight * 0.6, behavior: 'smooth' }); };
+    up.addEventListener('click', function () { by(-1); });
+    down.addEventListener('click', function () { by(1); });
+    track.addEventListener('pointerdown', function (e) {
+      if (e.target === thumb) return;
+      var r = thumb.getBoundingClientRect(); by(e.clientY < r.top ? -1 : 1);
+    });
+    thumb.addEventListener('pointerdown', function (e) {
+      var s = scroller(); if (!s || !s.el) return;
+      e.preventDefault(); thumb.setPointerCapture(e.pointerId);
+      sb.drag = { y: e.clientY, top: s.el.scrollTop, el: s.el };
+    });
+    thumb.addEventListener('pointermove', function (e) {
+      var g = sb.drag; if (!g) return;
+      var room = track.clientHeight - thumb.offsetHeight, span = g.el.scrollHeight - g.el.clientHeight;
+      if (room > 0) g.el.scrollTop = g.top + (e.clientY - g.y) * span / room;
+    });
+    thumb.addEventListener('pointerup', function () { sb.drag = null; });
+    thumb.addEventListener('pointercancel', function () { sb.drag = null; });
+    // (kept up to date as it's scrolled, and as the checkout opens its next part — only while the window's open)
+    sb.tick = function tick() {
+      if (!box.classList.contains('open')) { box.classList.remove('scrolls'); sb.running = false; return; }
+      requestAnimationFrame(tick);
+      var s = scroller(), el = s && s.el;
+      var more = !!el && el.scrollHeight > el.clientHeight + 2;
+      box.classList.toggle('scrolls', more);
+      if (!s) { sb.top.classList.remove('on'); sb.bottom.classList.remove('on'); return; }
+      // (over the page: its own place in the window)
+      var f = s.f, fl = f.offsetLeft, ft = f.offsetTop, fw = f.offsetWidth, fh = f.offsetHeight;
+      var inner = el && el !== (el.ownerDocument.scrollingElement || el.ownerDocument.documentElement) ? el.getBoundingClientRect() : null;
+      var t0 = inner ? ft + inner.top : ft, h0 = inner ? inner.height : fh, l0 = inner ? fl + inner.left : fl, w0 = inner ? inner.width : fw;
+      sb.top.style.cssText = 'left:' + l0 + 'px;top:' + t0 + 'px;width:' + w0 + 'px';
+      sb.bottom.style.cssText = 'left:' + l0 + 'px;top:' + (t0 + h0 - 56) + 'px;width:' + w0 + 'px';
+      var top = more ? el.scrollTop : 0, span = more ? el.scrollHeight - el.clientHeight : 0;
+      sb.top.classList.toggle('on', more && top > 2);
+      sb.bottom.classList.toggle('on', more && top < span - 2);
+      if (!more) return;
+      // (clear of the × at the top)
+      var bt = Math.max(ft, 52);
+      sb.bar.style.cssText = 'left:' + (fl + fw + 8) + 'px;top:' + bt + 'px;height:' + (fh - (bt - ft)) + 'px';
+      up.disabled = top <= 2; down.disabled = top >= span - 2;
+      var th = track.clientHeight, kh = Math.max(28, th * el.clientHeight / el.scrollHeight);
+      thumb.style.height = kh + 'px';
+      thumb.style.top = ((th - kh) * (span ? top / span : 0)) + 'px';
+    };
   }
   function openTip(at) {
     from = at && typeof at.x === 'number' && typeof at.y === 'number' ? at : null;
@@ -268,23 +463,35 @@
     }
     box.getBoundingClientRect();
     veil.classList.add('open'); box.classList.add('open');
+    if (sb.tick && !sb.running) { sb.running = true; requestAnimationFrame(sb.tick); }
     if (showing === 'contact') prefill(what);
   }
   function open(what, at) {
     from = at && typeof at.x === 'number' && typeof at.y === 'number' ? at : null;
     showing = 'contact';
     frame.style.display = 'block'; if (tip.frame) tip.frame.style.display = 'none';
-    box.classList.remove('wide', 'go'); box.setAttribute('aria-label', 'Contact');
+    box.classList.remove('wide'); box.setAttribute('aria-label', 'Contact');
     if (!form) { wanted = what || ''; load(); return; }
     show(what);
   }
   function close() {
+    if (!box) return;
     veil.classList.remove('open'); box.classList.remove('open');
+    // (their thanks read: the room told — the creature's turn)
+    if (tip.owed) {
+      tip.owed = false;
+      var p = document.querySelector('.rmi-frame');
+      if (p && p.contentWindow) p.contentWindow.postMessage({ rmiTipped: true }, PAGE);
+    }
     hiding = setTimeout(function () {
       if (box.classList.contains('open')) return;
-      box.style.display = 'none'; box.classList.remove('go');
+      box.style.display = 'none';
       // (the tip jar, if it went on to pay: back to its start for next time)
-      if (box.classList.contains('wide')) { box.classList.remove('wide'); tip.dressed = false; tip.block = null; tip.frame.src = 'about:blank'; tip.frame.removeAttribute('src'); }
+      if (box.classList.contains('wide') || box.classList.contains('thanked')) {
+        box.classList.remove('wide', 'thanked'); tip.paying = false; clearInterval(tip.watch);
+        tip.dressed = false; tip.block = null; tip.frame.src = 'about:blank'; tip.frame.removeAttribute('src');
+        if (showing === 'thanks') showing = 'tip';
+      }
     }, box.classList.contains('grow') ? 470 : 220);
   }
   /* a tip made: the Order Confirmation Page left the time of it here (same site, same browser). Told to the room as it
@@ -295,9 +502,9 @@
     try { at = +localStorage.getItem(TIPPED) || 0; } catch (e) { at = 0; }
     if (!at || Date.now() - at > 2 * 3600 * 1000) return;
     var p = document.querySelector('.rmi-frame');
-    if (!p || !p.contentWindow) return;
+    if (!p || !p.contentWindow || !box) return;
     try { localStorage.removeItem(TIPPED); } catch (e) {}
-    p.contentWindow.postMessage({ rmiTipped: true }, PAGE);
+    thank();
   }
   window.addEventListener('storage', function (e) { if (e.key === TIPPED && e.newValue) tipped(); });
   window.addEventListener('pageshow', function (e) { if (e.persisted) tipped(); });
