@@ -207,6 +207,22 @@
         try { new d.defaultView.MutationObserver(later).observe(d.body, { childList: true, subtree: true }); } catch (e) {}
       }
       if (d) d.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+      // (paid, the checkout sends itself on to Squarespace's own thank-you page: caught as it goes — her thank-you
+      // instead, there and then — Robyn, 2026-11-04: "this image won't leave the screen after you purchase. in this
+      // window, user should see the thank you info after making payment")
+      try {
+        var fnav = tip.frame.contentWindow.navigation;
+        if (fnav && fnav.addEventListener && !fnav.rmiWatched) {
+          fnav.rmiWatched = true;
+          fnav.addEventListener('navigate', function (e) {
+            var u; try { u = new URL(e.destination.url); } catch (x) { return; }
+            if (!tip.paying || !paidAt(u)) return;
+            if (e.cancelable) e.preventDefault();
+            try { localStorage.removeItem(TIPPED); } catch (x) {}
+            thank();
+          });
+        }
+      } catch (e) {}
       return;
     }
     // (back on it, or on it for the first time: dressed, at its own width)
@@ -272,7 +288,17 @@
     'button:hover *, [role=button]:hover *, a[class*="button" i]:hover * { color: #f0f0ee !important; }',
     'button *, [role=button] * { color: inherit !important; }',
     // (its sections' boxes: a hairline at most, as the window is the frame)
-    'section, fieldset, [class*="card" i], [class*="panel" i], [class*="section" i] { border-radius: 0 !important; }'
+    'section, fieldset, [class*="card" i], [class*="panel" i], [class*="section" i] { border-radius: 0 !important; }',
+    // (paying: Squarespace's "Completing your order" alone in the window — its white screen, made see-through above,
+    // had left the words written over the summary's buttons: Robyn, 2026-11-04, "two overlapping screens")
+    'html:has([class*="LoadingOverlay-overlay"]) body * { visibility: hidden !important; }',
+    'html:has([class*="LoadingOverlay-overlay"]) body [class*="LoadingOverlay-overlay"], html:has([class*="LoadingOverlay-overlay"]) body [class*="LoadingOverlay-overlay"] * { visibility: visible !important; }',
+    // (and a box of Squarespace's own over the checkout — "Submit Failure", say, for a tip under its 50¢ least: Robyn,
+    // 2026-11-04 — alone in the window too, its Ok a hairline box like the others)
+    'html:has([aria-modal="true"]) body * { visibility: hidden !important; }',
+    'html:has([aria-modal="true"]) body [aria-modal="true"], html:has([aria-modal="true"]) body [aria-modal="true"] * { visibility: visible !important; }',
+    '[aria-modal="true"] { box-shadow: none !important; }',
+    '[aria-modal="true"] button { min-width: 120px !important; padding: 13px 34px 12px !important; outline: none !important; }'
   ].join('\n');
   // the Donation block's own parts, dressed like the Contact form's: the amounts as small capitals, the button a hairline box
   var TIP_STYLE = [
@@ -311,6 +337,7 @@
       if (u.origin !== location.origin) return;
       if (!tip.paying && !/^\/checkout(\/|$)/.test(u.pathname)) return;
       e.preventDefault();
+      if (tip.paying && paidAt(u)) { try { localStorage.removeItem(TIPPED); } catch (x) {} thank(); return; }
       // (the checkout trying to be the whole page from in here: it stays where it is)
       var at = null; try { at = tip.frame.contentWindow.location.href; } catch (x) { at = null; }
       if (at !== u.href) tip.frame.src = u.href;
@@ -320,7 +347,11 @@
   /* paid (Robyn: "The message should come from the creature" — not Squarespace's thank-you page): the window shuts as
      soon as the payment's through, and the room is told — the creature thanks them. Known by the line her Order
      Confirmation Page code leaves (embed/), or by the checkout arriving at its confirmation (its address, or its words) */
-  var PAID_AT = /order-confirm|confirmation|\/orders?\/|[?&]orderid=|thank-?you/i;
+  /* (a donation's, as Squarespace's checkout sends itself on when it's paid — Robyn, 2026-11-04, a real $1 left the window
+     on the summary: /checkout/confirmed/redirect?oid=…&type=donation, then /checkout/donation-confirmed; an order's
+     received but not yet settled: /checkout/order-received) */
+  var PAID_AT = /\/checkout\/(confirmed|donation-confirmed|order-received|order-confirmed|gift-card-order-confirmed|subscription-confirmed|membership-confirmed)|order-confirm|confirmation|\/orders?\/|[?&](orderid|oid)=|type=donation|thank-?you/i;
+  function paidAt(u) { var p = u.pathname + u.search; return PAID_AT.test(p) && !/^\/checkout\/?\?cartToken=/i.test(p); }
   var PAID_SAYS = /thank you for your (donation|order|gift|support|purchase)|order confirmed|donation (confirmed|received)|order (number|#)/i;
   function watchPaid() {
     clearInterval(tip.watch);
@@ -330,8 +361,7 @@
       var href = '', text = '', flag = 0;
       try { href = tip.frame.contentWindow.location.href; text = tip.frame.contentDocument.body.innerText || ''; } catch (x) { href = ''; }
       try { flag = +localStorage.getItem(TIPPED) || 0; } catch (x) { flag = 0; }
-      var path = href.replace(/^https?:\/\/[^/]+/, '');
-      var paid = flag >= since - 1000 || (PAID_AT.test(path) && !/^\/checkout\?cartToken=/i.test(path)) || PAID_SAYS.test(text);
+      var paid = flag >= since - 1000 || (!!href && paidAt(new URL(href))) || PAID_SAYS.test(text);
       if (!paid) return;
       try { localStorage.removeItem(TIPPED); } catch (x) {}
       thank();
