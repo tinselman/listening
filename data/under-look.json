@@ -45,9 +45,9 @@
  "inset": 0.45,
  "floorDrop": 0.98,
  "floor": 1,
- "floor2": 3,
- "blend": 0.42,
+ "floor2": 2,
+ "blend": 0.34,
  "floorColor": "#ffffff",
- "refl": 1.08,
+ "refl": 2.02,
  "ripples": 3
 }
