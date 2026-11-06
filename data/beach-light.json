@@ -1,0 +1,23 @@
+{
+ "sun": 1.68,
+ "sunColour": "#ffefd7",
+ "sunHeight": 41,
+ "sunFrom": 52,
+ "shafts": 1.61,
+ "mist": 0,
+ "mistLow": 0,
+ "mistSpeed": 0,
+ "daylight": 0.9,
+ "floorGlow": 3,
+ "floorGlowSize": 1.18,
+ "underRoof": 2.39,
+ "ambient": 0,
+ "shack": 0.07,
+ "shackBeam": 1.12,
+ "walls": 0.1,
+ "fans": 0.76,
+ "view": 0.66,
+ "viewMist": 1,
+ "shine": 1.72,
+ "exposure": 1
+}
