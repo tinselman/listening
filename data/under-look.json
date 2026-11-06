@@ -8,26 +8,26 @@
   "ABRAHAM"
  ],
  "lamp": {
-  "k": 1.81,
-  "spread": 36,
-  "tilt": 60,
-  "turn": 13,
-  "along": 5.66,
-  "across": -0.71,
-  "height": 2.67
+  "k": 1,
+  "spread": 43,
+  "tilt": 36,
+  "turn": 43,
+  "along": 7.24,
+  "across": -1.09,
+  "height": 3.4
  },
  "bulbs": [
   {
    "k": 0.99,
    "along": 0.8,
-   "across": -0.57,
+   "across": -0.78,
    "height": 1.16
   },
   {
-   "k": 1.12,
-   "along": 6.03,
-   "across": 1.98,
-   "height": 2.17
+   "k": 0.21,
+   "along": 6.39,
+   "across": 2.56,
+   "height": 1.8
   }
  ],
  "xmas": 1,
@@ -37,15 +37,15 @@
  "wallOn": 0,
  "wallDepth": 0,
  "wallSize": 1,
- "ceiling": "#c9c4b6",
- "deck": "#ebebeb",
+ "ceiling": "#ffffff",
+ "deck": "#ffffff",
  "deckStyle": 3,
- "inset": 0.33,
- "floorDrop": 1.6,
- "floor": 3,
- "floor2": 0,
- "blend": 0,
+ "inset": 0.45,
+ "floorDrop": 1.34,
+ "floor": 0,
+ "floor2": 3,
+ "blend": 0.5,
  "floorColor": "#ffffff",
- "refl": 1.3,
+ "refl": 0.36,
  "ripples": 3
 }
