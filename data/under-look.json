@@ -1,0 +1,51 @@
+{
+ "names": [
+  "ROBYN",
+  "ALEXANDER",
+  "OPAL",
+  "MISCHA",
+  "GRACE",
+  "ABRAHAM"
+ ],
+ "lamp": {
+  "k": 1.81,
+  "spread": 36,
+  "tilt": 60,
+  "turn": 13,
+  "along": 5.66,
+  "across": -0.71,
+  "height": 2.67
+ },
+ "bulbs": [
+  {
+   "k": 0.99,
+   "along": 0.8,
+   "across": -0.57,
+   "height": 1.16
+  },
+  {
+   "k": 1.12,
+   "along": 6.03,
+   "across": 1.98,
+   "height": 2.17
+  }
+ ],
+ "xmas": 1,
+ "cracks": 0,
+ "crackDepth": 0,
+ "wallTex": 1,
+ "wallOn": 0,
+ "wallDepth": 0,
+ "wallSize": 1,
+ "ceiling": "#c9c4b6",
+ "deck": "#ebebeb",
+ "deckStyle": 3,
+ "inset": 0.33,
+ "floorDrop": 1.6,
+ "floor": 3,
+ "floor2": 0,
+ "blend": 0,
+ "floorColor": "#ffffff",
+ "refl": 1.3,
+ "ripples": 3
+}
