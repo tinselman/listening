@@ -26,13 +26,15 @@
   {
    "k": 0.21,
    "along": 6.39,
-   "across": 2.56,
+   "across": 2.7,
    "height": 1.8
   }
  ],
  "xmas": 1,
- "cracks": 0,
- "crackDepth": 0,
+ "cracks": 0.16,
+ "crackDepth": 0.0003,
+ "edgeWear": 0,
+ "cornerWear": 0.24,
  "wallTex": 1,
  "wallOn": 0,
  "wallDepth": 0,
@@ -46,6 +48,6 @@
  "floor2": 3,
  "blend": 0.5,
  "floorColor": "#ffffff",
- "refl": 0.36,
+ "refl": 0.15,
  "ripples": 3
 }
