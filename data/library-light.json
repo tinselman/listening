@@ -67,7 +67,7 @@
    "size": 0.04,
    "shine": false,
    "bulb": false,
-   "halo": 1
+   "halo": 1.73
   },
   {
    "id": "arcade2",
@@ -90,7 +90,7 @@
    "size": 0.04,
    "shine": false,
    "bulb": false,
-   "halo": 1
+   "halo": 1.74
   },
   {
    "id": "tank",
@@ -113,7 +113,7 @@
    "size": 0.04,
    "shine": false,
    "bulb": false,
-   "halo": 0
+   "halo": 0.28
   },
   {
    "id": "tank2",
