@@ -246,20 +246,38 @@
         }
         // A CODE (Robyn, 2026-11-09: "this is a code that would allow users to donate for free"): typed here and Enter, it counts as a tip — the same thank-you, then the creature —
         // with nothing paid. Under Donate, over the notice. Any capitals, spaces ignored. A wrong one: said so
+        // (2026-11-09: typed, then DONATE clicked — as he did — went on to pay $1: the box has its own → now, and DONATE
+        // with a good code in the box uses the code, nothing paid. Return, → or DONATE, all caught before the page's own
+        // handlers (on the window, capturing))
         if (!block.querySelector('.rmi-code')) {
           var code = d.createElement('div'); code.className = 'rmi-code';
+          var row = d.createElement('div'); row.className = 'rmi-code-row';
           var ci = d.createElement('input'); ci.type = 'text'; ci.placeholder = 'Have a code?'; ci.autocomplete = 'off'; ci.spellcheck = false;
           ci.setAttribute('autocapitalize', 'off'); ci.setAttribute('autocorrect', 'off'); ci.setAttribute('aria-label', 'Code'); ci.setAttribute('enterkeyhint', 'go');
+          var cb = d.createElement('button'); cb.type = 'button'; cb.className = 'rmi-code-go'; cb.textContent = '\u2192'; cb.setAttribute('aria-label', 'Use code');
           var cm = d.createElement('p'); cm.className = 'rmi-code-msg'; cm.setAttribute('aria-live', 'polite');
-          ci.addEventListener('keydown', function (e) {
-            if (e.key !== 'Enter') return;
-            e.preventDefault(); e.stopPropagation();
-            if (codeOk(ci.value)) { ci.value = ''; cm.textContent = ''; thank(); return; }
+          var useCode = function () {
+            if (codeOk(ci.value)) { ci.value = ''; cm.textContent = ''; thank('code'); return; }
             cm.textContent = ci.value.trim() ? "Sorry \u2014 that code doesn't work." : '';
-            ci.select();
-          });
+            ci.focus(); ci.select();
+          };
+          var w = d.defaultView;
+          w.addEventListener('keydown', function (e) {
+            if (e.target !== ci || e.key !== 'Enter') return;
+            e.preventDefault(); e.stopImmediatePropagation(); useCode();
+          }, true);
+          w.addEventListener('keypress', function (e) { if (e.target === ci && e.key === 'Enter') { e.preventDefault(); e.stopImmediatePropagation(); } }, true);
+          w.addEventListener('keyup', function (e) { if (e.target === ci && e.key === 'Enter') { e.preventDefault(); e.stopImmediatePropagation(); } }, true);
+          w.addEventListener('click', function (e) {
+            var t = e.target && e.target.closest ? e.target : null;
+            if (!t) return;
+            if (t.closest('.rmi-code-go')) { e.preventDefault(); e.stopImmediatePropagation(); useCode(); return; }
+            // (DONATE — the Donation block's own button — with a good code typed: the code instead)
+            if (codeOk(ci.value) && !t.closest('.rmi-code') && t.closest('button, [type=submit], a.btn, .button, .sqs-donate-button') && block.contains(t)) { e.preventDefault(); e.stopImmediatePropagation(); useCode(); }
+          }, true);
+          w.addEventListener('submit', function (e) { if (codeOk(ci.value)) { e.preventDefault(); e.stopImmediatePropagation(); useCode(); } }, true);
           ci.addEventListener('input', function () { cm.textContent = ''; });
-          code.appendChild(ci); code.appendChild(cm);
+          row.appendChild(ci); row.appendChild(cb); code.appendChild(row); code.appendChild(cm);
           var notice = block.querySelector('.rmi-notice');
           if (notice) block.insertBefore(code, notice); else block.appendChild(code);
         }
@@ -332,7 +350,12 @@
     '.rmi-tip input[type=radio] { accent-color: #111; }',
     // (the code: a short hairline under Donate, its answer under it in the notice's grey)
     '.rmi-tip .rmi-code { margin: 30px auto 0 !important; max-width: 200px !important; }',
-    '.rmi-tip .rmi-code input[type=text] { width: 100% !important; text-align: center !important; font-size: 14px !important; padding: 4px 0 !important; }',
+    '.rmi-tip .rmi-code-row { display: flex !important; align-items: flex-end !important; border-bottom: 1px solid #111 !important; }',
+    '.rmi-tip .rmi-code-row:focus-within { border-bottom-color: #f82c1c !important; }',
+    '.rmi-tip .rmi-code input[type=text] { flex: 1 1 auto !important; min-width: 0 !important; width: auto !important; text-align: center !important; font-size: 14px !important; padding: 4px 0 4px 26px !important; border-bottom: 0 !important; }',
+    '.rmi-tip .rmi-code .rmi-code-go { flex: none !important; width: 26px !important; margin: 0 !important; padding: 0 0 4px !important; border: 0 !important; background: transparent !important;',
+    '  color: #111 !important; font-size: 16px !important; letter-spacing: 0 !important; line-height: 1.4 !important; cursor: pointer; }',
+    '.rmi-tip .rmi-code .rmi-code-go:hover { background: transparent !important; color: #f82c1c !important; }',
     '.rmi-tip .rmi-code input::placeholder { color: #8a8a8a; letter-spacing: .04em; }',
     '.rmi-tip .rmi-code-msg { font-size: 12px !important; line-height: 1.6 !important; color: #6b6b6b !important; margin: 8px 0 0 !important; min-height: 1.6em; }',
     '.rmi-tip .rmi-notice { font-size: 12px !important; line-height: 1.6 !important; letter-spacing: .02em !important; color: #6b6b6b !important; margin: 22px 0 0 !important; }',
@@ -404,9 +427,16 @@
     for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
     return !!s && CODES.indexOf(h) >= 0;
   }
+  /* the code's own screens, in place of the thank-you (Robyn, 2026-11-09 — his words, as he wrote them): the side room
+     not yet found in this browser, or found (the room says which as it opens the tip jar: rmiTipJar.open) */
+  // (kept as base64, so the word they'd give away isn't there to be read in this file: NOTES.md has them as written)
+  var CODE_NEW = atob('QSBCYW5kY2FtcCBjb250cmlidXRvcj8gSG9seSBtYWNrZXJlbCEgSSdtIHNvIGdsYWQgeW91IHN0b3BwZWQgYnkuIFdlIGhhdmUgc29tZSB0aGluZ3MgdG8gc2hvdyB5b3Uh');
+  var CODE_IN = atob('WWF5ISBBIGJhbmRjYW1wIHVzZXIhIEl0IGxvb2tzIGxpa2UgeW91J3ZlIGFscmVhZHkgZm91bmQgeW91ciB3YXkgaW50byBzZWNyZXQgYXJlYXMu');
   var THANKS = "THANK YOU for contributing to Robyn's ongoing musical work and his work in the sound listening room. He has something for you too! Take a look!";
-  function thank() {
+  function thank(how) {
     if (!box) return;
+    tip.code = how === 'code';
+    if (tip.thanks) tip.thanks.textContent = tip.code ? (tip.roomOpen ? CODE_IN : CODE_NEW) : THANKS;
     tip.paying = false; clearInterval(tip.watch);
     var p = document.querySelector('.rmi-frame');
     if (!tip.owed && p && p.contentWindow) p.contentWindow.postMessage({ rmiTipSoon: true }, PAGE);
@@ -544,7 +574,8 @@
     if (tip.owed) {
       tip.owed = false;
       var p = document.querySelector('.rmi-frame');
-      if (p && p.contentWindow) p.contentWindow.postMessage({ rmiTipped: true }, PAGE);
+      if (p && p.contentWindow) p.contentWindow.postMessage({ rmiTipped: true, code: !!tip.code }, PAGE);
+      tip.code = false;
     }
     hiding = setTimeout(function () {
       if (box.classList.contains('open')) return;
@@ -575,7 +606,7 @@
     if (e.origin !== PAGE || !e.data) return;
     if (e.data.rmiHello) { e.source.postMessage({ rmiContactHost: true }, PAGE); tipped(); }
     if (e.data.rmiContact) open(e.data.rmiContact.about, e.data.rmiContact.from);
-    if (e.data.rmiTipJar) openTip(e.data.rmiTipJar.from);
+    if (e.data.rmiTipJar) { tip.roomOpen = !!e.data.rmiTipJar.open; openTip(e.data.rmiTipJar.from); }
     if (e.data.rmiContactClose) close();
     // the visitor walked out of the gallery's front door: back to wherever they were on the site
     // (going Back, not loading the page again, so they land where they were on it, scrolled as they left it)
