@@ -244,6 +244,25 @@
           var note = d.createElement('p'); note.className = 'rmi-notice'; note.textContent = 'Notice: User data will not be shared or sold.';
           block.appendChild(note);
         }
+        // A CODE (Robyn, 2026-11-09: "this is a code that would allow users to donate for free"): typed here and Enter, it counts as a tip — the same thank-you, then the creature —
+        // with nothing paid. Under Donate, over the notice. Any capitals, spaces ignored. A wrong one: said so
+        if (!block.querySelector('.rmi-code')) {
+          var code = d.createElement('div'); code.className = 'rmi-code';
+          var ci = d.createElement('input'); ci.type = 'text'; ci.placeholder = 'Have a code?'; ci.autocomplete = 'off'; ci.spellcheck = false;
+          ci.setAttribute('autocapitalize', 'off'); ci.setAttribute('autocorrect', 'off'); ci.setAttribute('aria-label', 'Code'); ci.setAttribute('enterkeyhint', 'go');
+          var cm = d.createElement('p'); cm.className = 'rmi-code-msg'; cm.setAttribute('aria-live', 'polite');
+          ci.addEventListener('keydown', function (e) {
+            if (e.key !== 'Enter') return;
+            e.preventDefault(); e.stopPropagation();
+            if (codeOk(ci.value)) { ci.value = ''; cm.textContent = ''; thank(); return; }
+            cm.textContent = ci.value.trim() ? "Sorry \u2014 that code doesn't work." : '';
+            ci.select();
+          });
+          ci.addEventListener('input', function () { cm.textContent = ''; });
+          code.appendChild(ci); code.appendChild(cm);
+          var notice = block.querySelector('.rmi-notice');
+          if (notice) block.insertBefore(code, notice); else block.appendChild(code);
+        }
         if (block !== d.body) d.body.appendChild(block);
         tip.block = block; tip.dressed = true;
         d.head.appendChild(Object.assign(d.createElement('style'), { textContent: TIP_STYLE }));
@@ -311,6 +330,11 @@
     '.rmi-tip p { font-size: 15px !important; line-height: 2 !important; color: #111 !important; margin: 0 0 18px !important; }',
     '.rmi-tip label { font-size: 12px !important; letter-spacing: .18em !important; text-transform: uppercase !important; color: #111 !important; cursor: pointer; }',
     '.rmi-tip input[type=radio] { accent-color: #111; }',
+    // (the code: a short hairline under Donate, its answer under it in the notice's grey)
+    '.rmi-tip .rmi-code { margin: 30px auto 0 !important; max-width: 200px !important; }',
+    '.rmi-tip .rmi-code input[type=text] { width: 100% !important; text-align: center !important; font-size: 14px !important; padding: 4px 0 !important; }',
+    '.rmi-tip .rmi-code input::placeholder { color: #8a8a8a; letter-spacing: .04em; }',
+    '.rmi-tip .rmi-code-msg { font-size: 12px !important; line-height: 1.6 !important; color: #6b6b6b !important; margin: 8px 0 0 !important; min-height: 1.6em; }',
     '.rmi-tip .rmi-notice { font-size: 12px !important; line-height: 1.6 !important; letter-spacing: .02em !important; color: #6b6b6b !important; margin: 22px 0 0 !important; }',
     '.rmi-tip input[type=number], .rmi-tip input[type=text] { -webkit-appearance: none; appearance: none; background: transparent !important; border: 0 !important;',
     '  border-bottom: 1px solid #111 !important; border-radius: 0 !important; box-shadow: none !important; outline: none !important; font-size: 16px !important; color: #111 !important; }',
@@ -371,6 +395,15 @@
      "THANK YOU for contributing …"): the window says so — its words in place of the checkout, at the Contact window's
      size — and the room is told to get ready; closed (the ×, a click off it, Esc), the room's told, and the creature
      takes it from there. (Told of a tip some other way — the checkout in a tab of its own — the window opens to say it) */
+  /* the tip jar's codes, each kept as a hash of itself (lower case, no spaces: FNV-1a) so it isn't there to be read in
+     this file (Robyn's, 2026-11-09 — which word it is: the project's notes). Another: its hash added here */
+  var CODES = [2036957983];
+  function codeOk(s) {
+    s = String(s || '').toLowerCase().replace(/\s+/g, '');
+    var h = 0x811c9dc5;
+    for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+    return !!s && CODES.indexOf(h) >= 0;
+  }
   var THANKS = "THANK YOU for contributing to Robyn's ongoing musical work and his work in the sound listening room. He has something for you too! Take a look!";
   function thank() {
     if (!box) return;
