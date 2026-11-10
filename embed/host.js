@@ -276,7 +276,11 @@
             if (codeOk(ci.value) && !t.closest('.rmi-code') && t.closest('button, [type=submit], a.btn, .button, .sqs-donate-button') && block.contains(t)) { e.preventDefault(); e.stopImmediatePropagation(); useCode(); }
           }, true);
           w.addEventListener('submit', function (e) { if (codeOk(ci.value)) { e.preventDefault(); e.stopImmediatePropagation(); useCode(); } }, true);
-          ci.addEventListener('input', function () { cm.textContent = ''; });
+          // (Robyn, 2026-11-09: "when user enters "bandcamp" the donations go to 0.00": the moment a good code is in the box,
+          // every amount and the Total read $0.00 — by a class on the block and the style below, Squarespace's own words
+          // left as they are underneath; the code taken away again, back to what they were)
+          var free = function () { block.classList.toggle('rmi-free', codeOk(ci.value)); };
+          ci.addEventListener('input', function () { cm.textContent = ''; free(); });
           row.appendChild(ci); row.appendChild(cb); code.appendChild(row); code.appendChild(cm);
           var notice = block.querySelector('.rmi-notice');
           if (notice) block.insertBefore(code, notice); else block.appendChild(code);
@@ -357,6 +361,12 @@
     '  color: #111 !important; font-size: 16px !important; letter-spacing: 0 !important; line-height: 1.4 !important; cursor: pointer; }',
     '.rmi-tip .rmi-code .rmi-code-go:hover { background: transparent !important; color: #f82c1c !important; }',
     '.rmi-tip .rmi-code input::placeholder { color: #8a8a8a; letter-spacing: .04em; }',
+    // (a good code in the box: each amount's first line, and the Total, written over as $0.00 — the amounts' names kept)
+    '.rmi-tip.rmi-free .radio-label { display: inline-block !important; position: relative !important; }',
+    '.rmi-tip.rmi-free .option:not(:has(input[value="Custom Amount"])) .radio-label::first-line { color: transparent !important; }',
+    '.rmi-tip.rmi-free .option:not(:has(input[value="Custom Amount"])) .radio-label::before { content: "$0.00"; position: absolute; top: 0; left: 0; right: 0; white-space: nowrap; color: #111; }',
+    '.rmi-tip.rmi-free [id^="total-cost-line-items"] span { position: relative !important; color: transparent !important; }',
+    '.rmi-tip.rmi-free [id^="total-cost-line-items"] span::after { content: "$0.00"; position: absolute; top: 0; right: 0; white-space: nowrap; color: #111; }',
     '.rmi-tip .rmi-code-msg { font-size: 12px !important; line-height: 1.6 !important; color: #6b6b6b !important; margin: 8px 0 0 !important; min-height: 1.6em; }',
     '.rmi-tip .rmi-notice { font-size: 12px !important; line-height: 1.6 !important; letter-spacing: .02em !important; color: #6b6b6b !important; margin: 22px 0 0 !important; }',
     '.rmi-tip input[type=number], .rmi-tip input[type=text] { -webkit-appearance: none; appearance: none; background: transparent !important; border: 0 !important;',
