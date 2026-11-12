@@ -1,4 +1,4 @@
-var Re=Object.defineProperty;var Ve=(v,e,l)=>e in v?Re(v,e,{enumerable:!0,configurable:!0,writable:!0,value:l}):v[e]=l;var Y=(v,e,l)=>Ve(v,typeof e!="symbol"?e+"":e,l);import{G as Fe,l as pe,b as Le,t as we,V,ar as be,p as He,I as se,m as fe,aP as ye,C as ve,k as ke,e as Me,D as ze,b6 as Ee,j as Pe,n as Ae,o as Ge,B as We,F as ne}from"./audio-BDCZ23wE.js";const Se={x0:-.62,x1:.62,z0:-.32,z1:1.05,depth:22},Z={x0:-.355,x1:.355,z0:-.025,z1:.605},Ie=`
+var Re=Object.defineProperty;var Ve=(v,e,l)=>e in v?Re(v,e,{enumerable:!0,configurable:!0,writable:!0,value:l}):v[e]=l;var Y=(v,e,l)=>Ve(v,typeof e!="symbol"?e+"":e,l);import{G as Fe,l as pe,b as Le,t as we,V,ar as be,p as He,I as se,m as fe,aP as ye,C as ve,k as ke,e as Me,D as ze,b6 as Ee,j as Pe,n as Ae,o as Ge,B as We,F as ne}from"./audio-BtwGQyvr.js";const Se={x0:-.62,x1:.62,z0:-.32,z1:1.05,depth:22},Z={x0:-.355,x1:.355,z0:-.025,z1:.605},Ie=`
   uniform mat4 uToShaft;
   varying vec3 vP; varying vec3 vN; varying vec2 vUv; varying vec3 vC;
   #ifdef USE_INSTANCING
