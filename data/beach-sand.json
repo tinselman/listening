@@ -1,0 +1,17 @@
+{
+ "color": "#a19b93",
+ "grain": 0.039,
+ "grainShow": 1,
+ "variety": 1,
+ "patch": 0.6,
+ "ripples": 0.23,
+ "rippleGap": 0.365,
+ "pebble": "#6f6a63",
+ "pebbleSize": 0.08199999999999999,
+ "pebbles": 0.54,
+ "round": 0.33,
+ "stretch": 1,
+ "pebbleVariety": 0.43,
+ "relief": 1,
+ "dock": false
+}
