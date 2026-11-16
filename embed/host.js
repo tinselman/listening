@@ -98,6 +98,14 @@
   // the tip jar's own frame in the same window (only one of the two shows at a time)
   var tip = { frame: null, block: null, wanted: false, at: null, dressed: false, paying: false, watch: 0, x: null, thanks: null, owed: false };
   var showing = 'contact';
+  /* THE VISITOR BOOK (Robyn, 2026-11-15: in the room's library, a book on a stand — "use the squarespace popup interface
+     we've been using in other rooms but here take their first name and leave in the book"; "they are prompted to enter
+     all contact info and save that via contact popup"): the same window, holding her Visitor Book page (/visitor-book,
+     Not Linked) down to its Form block — all their contact details, saved by her site as her contact form's are. When
+     it's sent (her form says thank you), the first name they typed goes to the room, which writes it in the book. No
+     such page (yet): the room's told, and asks for a first name itself. */
+  var book = { frame: null, form: null, wanted: false, first: '', watch: 0, done: false };
+  function tellRoom(data) { var p = document.querySelector('.rmi-frame'); if (p && p.contentWindow) p.contentWindow.postMessage(data, PAGE); }
 
   function build() {
     veil = document.createElement('div'); veil.className = 'rmi-veil'; document.body.appendChild(veil);
@@ -110,6 +118,9 @@
     tip.frame = document.createElement('iframe'); tip.frame.title = 'Tip jar'; tip.frame.style.display = 'none';
     box.appendChild(tip.frame);
     tip.frame.addEventListener('load', dressTip);
+    book.frame = document.createElement('iframe'); book.frame.title = 'Visitor book'; book.frame.style.display = 'none';
+    box.appendChild(book.frame);
+    book.frame.addEventListener('load', dressBook);
     // (card, Apple Pay: let in the window)
     tip.frame.setAttribute('allow', 'payment');
     // paying, a way out that can't be clicked by mistake (not a click off the window: that would lose what's typed)
@@ -164,8 +175,78 @@
       d.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
     })();
   }
+  /* her Visitor Book page, down to its form, dressed as the Contact form is; its first name caught as it's sent */
+  function dressBook() {
+    if (!book.frame.getAttribute('src')) return;
+    var d; try { d = book.frame.contentDocument; } catch (e) { d = null; }
+    var tries = 0;
+    (function wait() {
+      var block = d && d.querySelector('.sqs-block-form');
+      if (!block || !block.querySelector('form')) {
+        if (++tries < 45) { setTimeout(wait, 100); return; }
+        // (no form there — no such page on her site yet, its "not found" page: the room asks itself)
+        book.wanted = false; tellRoom({ rmiBookNoForm: true });
+        if (showing === 'book') close();
+        book.frame.removeAttribute('src');
+        return;
+      }
+      var font = d.createElement('link'); font.rel = 'stylesheet'; font.href = FONT; d.head.appendChild(font);
+      var style = d.createElement('link'); style.rel = 'stylesheet'; style.href = STYLE;
+      style.onload = style.onerror = function () {
+        block.classList.add('rmi-form'); d.body.appendChild(block); book.form = block;
+        new book.frame.contentWindow.ResizeObserver(fit).observe(block);
+        fit();
+        if (book.wanted) { book.wanted = false; show(null); var f = d.querySelector('.rmi-form input'); if (f) f.focus(); }
+      };
+      d.head.appendChild(style);
+      d.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+      // (as it's sent — by its button or by Return: the first name they typed, kept for when it's gone through)
+      var catchIt = function () { book.first = firstName(d); if (book.first) watchSent(d); };
+      d.addEventListener('submit', catchIt, true);
+      d.addEventListener('click', function (e) { if (e.target && e.target.closest && e.target.closest('button, input[type=submit], .button, [type=submit]')) catchIt(); }, true);
+    })();
+  }
+  /** the first name typed in her form: its First Name box (Squarespace's Name field), else the first word of a Name box */
+  function firstName(d) {
+    var q = ['input[name="fname"]', 'input[autocomplete="given-name"]', 'input[x-autocompletetype="given-name"]', '.first-name input', 'input[name*="first" i]'];
+    for (var i = 0; i < q.length; i++) { var el = d.querySelector(q[i]); if (el && el.value && el.value.trim()) return el.value.trim(); }
+    var labels = d.querySelectorAll('label, .caption-text, legend');
+    for (var j = 0; j < labels.length; j++) {
+      if (!/first/i.test(labels[j].textContent || '')) continue;
+      var box2 = labels[j].querySelector('input') || (labels[j].htmlFor && d.getElementById(labels[j].htmlFor)) || (labels[j].parentElement && labels[j].parentElement.querySelector('input'));
+      if (box2 && box2.value && box2.value.trim()) return box2.value.trim();
+    }
+    var n = d.querySelector('.rmi-form input[name="name"], .rmi-form input[type="text"]');
+    return n && n.value ? n.value.trim().split(/\s+/)[0] : '';
+  }
+  /** gone through: her form's thank-you showing (or the form gone, no error on it) — the room told the first name */
+  function watchSent(d) {
+    clearInterval(book.watch);
+    var t0 = Date.now();
+    book.watch = setInterval(function () {
+      var thanks = d.querySelector('.form-submission-text, .form-submission-html, [class*="submission-text"]');
+      var shown = thanks && thanks.offsetParent !== null && (thanks.textContent || '').trim();
+      var form = book.form && book.form.querySelector('form');
+      var err = d.querySelector('.field-error, .form-error, [class*="error"]:not(:empty)');
+      if (shown || (!form && !(err && err.offsetParent))) {
+        clearInterval(book.watch); book.done = true;
+        tellRoom({ rmiSigned: { first: book.first } });
+        setTimeout(function () { if (showing === 'book') close(); }, 2200);
+      } else if (Date.now() - t0 > 30000) clearInterval(book.watch);
+    }, 250);
+  }
+  function openBook(at) {
+    from = at && typeof at.x === 'number' && typeof at.y === 'number' ? at : null;
+    showing = 'book';
+    frame.style.display = 'none'; if (tip.frame) tip.frame.style.display = 'none'; book.frame.style.display = 'block';
+    box.classList.remove('wide'); box.setAttribute('aria-label', 'Visitor book');
+    tellRoom({ rmiBookOpen: true });
+    if (!book.form) { book.wanted = true; if (!book.frame.getAttribute('src')) book.frame.src = '/visitor-book'; return; }
+    show(null);
+  }
   function fit() {
     var cs = getComputedStyle(box), room = window.innerHeight - (big.matches ? 48 : 32) - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+    if (showing === 'book') { if (book.form) book.frame.style.height = Math.max(120, Math.min(book.form.offsetHeight + 2, room)) + 'px'; return; }
     if (showing === 'tip') {
       // (on to pay: as tall as there's room for; else as tall as the Donation block)
       if (box.classList.contains('wide')) tip.frame.style.height = room + 'px';
@@ -535,7 +616,7 @@
   }
   function showTip() {
     showing = 'tip';
-    frame.style.display = 'none'; tip.frame.style.display = 'block';
+    frame.style.display = 'none'; tip.frame.style.display = 'block'; if (book.frame) book.frame.style.display = 'none';
     box.setAttribute('aria-label', 'Tip jar');
     show(null);
     try { tip.frame.focus(); } catch (e) {}
@@ -572,7 +653,7 @@
   function open(what, at) {
     from = at && typeof at.x === 'number' && typeof at.y === 'number' ? at : null;
     showing = 'contact';
-    frame.style.display = 'block'; if (tip.frame) tip.frame.style.display = 'none';
+    frame.style.display = 'block'; if (tip.frame) tip.frame.style.display = 'none'; if (book.frame) book.frame.style.display = 'none';
     box.classList.remove('wide'); box.setAttribute('aria-label', 'Contact');
     if (!form) { wanted = what || ''; load(); return; }
     show(what);
@@ -590,6 +671,8 @@
     hiding = setTimeout(function () {
       if (box.classList.contains('open')) return;
       box.style.display = 'none';
+      // (the visitor book, sent: back to its start for next time)
+      if (book.done) { book.done = false; book.form = null; clearInterval(book.watch); book.frame.src = 'about:blank'; book.frame.removeAttribute('src'); }
       // (the tip jar, if it went on to pay: back to its start for next time)
       if (box.classList.contains('wide') || box.classList.contains('thanked')) {
         box.classList.remove('wide', 'thanked'); tip.paying = false; clearInterval(tip.watch);
@@ -618,6 +701,7 @@
     if (e.data.rmiContact) open(e.data.rmiContact.about, e.data.rmiContact.from);
     if (e.data.rmiTipJar) { tip.roomOpen = !!e.data.rmiTipJar.open; openTip(e.data.rmiTipJar.from); }
     if (e.data.rmiContactClose) close();
+    if (e.data.rmiVisitorBook) openBook(e.data.rmiVisitorBook.from);
     // the visitor walked out of the gallery's front door: back to wherever they were on the site
     // (going Back, not loading the page again, so they land where they were on it, scrolled as they left it)
     if (e.data.rmiLeave) {
