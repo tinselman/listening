@@ -1,4 +1,4 @@
-var Ve=Object.defineProperty;var He=(m,t,l)=>t in m?Ve(m,t,{enumerable:!0,configurable:!0,writable:!0,value:l}):m[t]=l;var j=(m,t,l)=>He(m,typeof t!="symbol"?t+"":t,l);import{G as Fe,l as ge,b as Me,t as pe,V as E,at as we,p as ke,I as se,m as fe,aY as Le,C as ve,k as Ae,e as ze,D as Ne,bu as Ge,j as Pe,n as Ie,o as We,B as qe,F as ne}from"./says-Nf2Xr4hw.js";const Se={x0:-.62,x1:.62,z0:-.32,z1:1.05,depth:22},Z={x0:-.355,x1:.355,z0:-.025,z1:.605},$e=`
+var Ve=Object.defineProperty;var He=(m,t,l)=>t in m?Ve(m,t,{enumerable:!0,configurable:!0,writable:!0,value:l}):m[t]=l;var j=(m,t,l)=>He(m,typeof t!="symbol"?t+"":t,l);import{G as Fe,l as ge,b as Me,t as pe,V as E,at as we,p as ke,I as se,m as fe,aY as Le,C as ve,k as Ae,e as ze,D as Ne,bu as Ge,j as Pe,n as Ie,o as We,B as qe,F as ne}from"./says-Caupl4CS.js";const Se={x0:-.62,x1:.62,z0:-.32,z1:1.05,depth:22},Z={x0:-.355,x1:.355,z0:-.025,z1:.605},$e=`
   uniform mat4 uToShaft;
   varying vec3 vP; varying vec3 vN; varying vec2 vUv; varying vec3 vC;
   #ifdef USE_INSTANCING
