@@ -1,0 +1,32 @@
+{
+ "wall": {
+  "pattern": "sprigs",
+  "base": "#2f7c95",
+  "ink": "#c4d4d6",
+  "tint": "#ffffff",
+  "scale": 2.1,
+  "gloss": 0.02,
+  "sheen": 18
+ },
+ "floor": {
+  "pattern": "chevron",
+  "base": "#af8f53",
+  "tint": "#ffffff",
+  "scale": 1.35,
+  "gloss": 0.275,
+  "sheen": 101
+ },
+ "amb": 1,
+ "lamps": {},
+ "things": {
+  "skull": {
+   "x": 0.03,
+   "y": 0,
+   "z": 1.53,
+   "turn": 0,
+   "size": 1,
+   "color": "#ffffff",
+   "gloss": 1
+  }
+ }
+}
